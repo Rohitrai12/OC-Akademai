@@ -82,22 +82,52 @@ function Header() {
         )}
       </div>
       {/* Bottom header */}
-      <div className="bottom-header py-4 px-4 md:px-10 flex justify-between items-center">
+      <div className="bottom-header py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center">
         {/* Logo */}
-        <div className="logo">
+        <div className="logo mb-4 md:mb-0">
           <img src="/logo.png" alt="Logo" />
         </div>
         {/* Right side links and button */}
-        <div className="right flex items-center">
-          <div className="links hidden md:flex space-x-4 font-medium">
-            <Link to="/" className="text-gray-600 hover:text-blue-500 transition duration-300">K-12</Link>
-            <Link to="/" className="text-gray-600 hover:text-blue-500 transition duration-300">HIGHER ED</Link>
-            <Link to="/" className="text-gray-600 hover:text-blue-500 transition duration-300">PROFESSIONAL ED</Link>
-            <Link to="/" className="text-gray-600 hover:text-blue-500 transition duration-300">RESOURCES</Link>
-            <Link to="/" className="text-gray-600 hover:text-blue-500 transition duration-300">NEWS & EVENTS</Link>
-            <Link to="/" className="text-gray-600 hover:text-blue-500 transition duration-300">ABOUT US</Link>
+        <div className="right flex flex-col md:flex-row items-center">
+          <div className="links mb-4 md:mb-0 md:mr-4 flex flex-wrap space-x-4 font-medium">
+            <Link
+              to="/"
+              className="text-gray-600 hover:text-blue-500 transition duration-300"
+            >
+              K-12
+            </Link>
+            <Link
+              to="/"
+              className="text-gray-600 hover:text-blue-500 transition duration-300"
+            >
+              HIGHER ED
+            </Link>
+            <Link
+              to="/"
+              className="text-gray-600 hover:text-blue-500 transition duration-300"
+            >
+              PROFESSIONAL ED
+            </Link>
+            <Link
+              to="/"
+              className="text-gray-600 hover:text-blue-500 transition duration-300"
+            >
+              RESOURCES
+            </Link>
+            <Link
+              to="/"
+              className="text-gray-600 hover:text-blue-500 transition duration-300"
+            >
+              NEWS & EVENTS
+            </Link>
+            <Link
+              to="/"
+              className="text-gray-600 hover:text-blue-500 transition duration-300"
+            >
+              ABOUT US
+            </Link>
           </div>
-          <button className="bg-[#091D4F] text-white py-2 px-6 rounded-full text-sm md:text-base ml-4">
+          <button className="bg-[#091D4F] text-white py-2 px-6 rounded-full text-sm md:text-base">
             Get A Demo
           </button>
         </div>
