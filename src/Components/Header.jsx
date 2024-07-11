@@ -85,7 +85,7 @@ function Header() {
       <div className="bottom-header py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center">
         {/* Logo */}
         <div className="logo mb-4 md:mb-0">
-          <img src="/logo.png" alt="Logo" className="w-[180px] mt-[-30px]" />
+          <img src="/logo.png" alt="Logo" className="w-[217px] mt-[-54px]" />
         </div>
         {/* Right side links and button */}
         <div className="right flex flex-col md:flex-row items-center">
