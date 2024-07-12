@@ -7,9 +7,10 @@ import JoinCommunity from "../Components/JoinCommunity";
 import OurAward from "../Components/OurAward";
 import Crafting from "../Components/Crafting";
 import Ready from "../Components/Ready";
+import Footer from "../Components/Footer";
 
 const HomePage = () => {
-    return (
+  return (
     <div>
       <Banner />
       <RegisterOpen />
@@ -19,10 +20,9 @@ const HomePage = () => {
       <OurAward />
       <Crafting />
       <Ready />
-       
+      <Footer />
     </div>
-    );
-  };
-  
-  export default HomePage;
-  
+  );
+};
+
+export default HomePage;
