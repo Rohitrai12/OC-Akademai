@@ -14,7 +14,7 @@ function Header() {
     <div>
       <div>
         {/* Top bar */}
-        <div className="top py-[0.7rem] pl-[4rem] px-[1.3rem] border-b border-gray-300 flex justify-between items-center">
+        <div className="top py-[0.7rem] px-4 md:px-[4rem] border-b border-gray-300 flex justify-between items-center">
           <div className="left">
             <div className="bg-[#7DCAF5] text-white py-1 px-4 rounded-full flex items-center text-sm font-medium cursor-pointer">
               North America <IoMdArrowDropdown className="ml-1 mt-[2px]" />
@@ -42,6 +42,9 @@ function Header() {
               >
                 Contact Us
               </Link>
+              <button className="bg-[#7DCAF5] text-white py-2 px-4 rounded-full flex items-center space-x-1">
+                Log In <IoMdArrowDropdown className="text-white" />
+              </button>
             </div>
             {/* Mobile menu toggle */}
             <div className="md:hidden">
@@ -52,9 +55,6 @@ function Header() {
                 <IoMdMenu size={24} />
               </button>
             </div>
-            <button className="bg-[#7DCAF5] text-white py-2 px-4 rounded-full flex items-center space-x-1">
-              Log In <IoMdArrowDropdown className="text-white" />
-            </button>
           </div>
         </div>
         {/* Mobile menu */}
@@ -85,11 +85,11 @@ function Header() {
       <div className="bottom-header py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center">
         {/* Logo */}
         <div className="logo mb-4 md:mb-0">
-          <img src="/logo.png" alt="Logo" className="w-[217px] mt-[-54px]" />
+          <img src="/logo.png" alt="Logo" className="w-[150px] md:w-[217px] mt-[-54px]" />
         </div>
         {/* Right side links and button */}
         <div className="right flex flex-col md:flex-row items-center">
-          <div className="links mb-4 md:mb-0 md:mr-4 flex flex-wrap space-x-4 font-medium">
+          <div className="links mb-4 md:mb-0 md:mr-4 flex flex-wrap space-x-4 font-medium text-center">
             <Link
               to="/"
               className="text-gray-600 hover:text-blue-500 transition duration-300"

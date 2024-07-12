@@ -6,9 +6,10 @@ import Header from "./Components/Header";
 function App() {
   return (
     <Router>
-      <Header />
+      <Header className="lg:block hidden" />
       <Routes>
         <Route path="/" element={<HomePage />} />
+
       </Routes>
     </Router>
   );
