@@ -5,52 +5,33 @@ import Qoute from "../assets/Images/qoute.png";
 
 const Crafting = () => {
   return (
-    <div className="container m-auto lg:flex justify-around items-center relative lg:mt-0 md:mt-[497px] mt-[300px]">
+    <div className="container m-auto lg:flex justify-around items-center relative lg:mt-0 md:mt-[497px] mt-[300px] pb-5">
       <div className="">
         <img src={Img} alt="" />
 
-
-
-
         <div
-        className="lg:m-0 m-auto lg:absolute p-5 mt-4 lg:mt-0  bg-[white] rounded-xl z-10 md:w-[280px]  w-[95%] lg:top-[240px] lg:left-[432px] lg:text-left text-center "
-        style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
-      >
-        <h4 className="text-[#143D50] text-[14px] ">FEATURED CUSTOMER</h4>
-        <h2 className="text-[24px]  text-[#091D4F] font-semibold">
-        Poway Unified
-        School District
-        </h2>
-        <p className="text-[16px] text-[#143D50]">
-        Michael Gizzo, High School Assistant Principal
-        </p>
-  <img src={Img2} alt="" />
-      </div>
+          className="lg:m-0 m-auto lg:absolute p-5 mt-4 lg:mt-0  bg-[white] rounded-xl z-10 md:w-[280px]  w-[95%] lg:top-[240px] lg:left-[432px] lg:text-left text-center "
+          style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
+        >
+          <h4 className="text-[#143D50] text-[14px] ">FEATURED CUSTOMER</h4>
+          <h2 className="text-[24px]  text-[#091D4F] font-semibold">
+            Poway Unified School District
+          </h2>
+          <p className="text-[16px] text-[#143D50]">
+            Michael Gizzo, High School Assistant Principal
+          </p>
+          <img src={Img2} alt="" />
+        </div>
 
+        <div className="w-[95%] bg-[#091D4F] p-5 lg:m-0 mt-4 lg:mt-0 m-auto  lg:absolute rounded-xl md:w-[420px] lg:left-[200px] lg:top-[437px] lg:text-left text-center">
+          <img src={Qoute} alt="" />
 
-<div className="w-[95%] bg-[#091D4F] p-5 lg:m-0 mt-4 lg:mt-0 m-auto  lg:absolute rounded-xl md:w-[420px] lg:left-[200px] lg:top-[437px] lg:text-left text-center">
-<img src={Qoute} alt="" />
-
-    <p className="text-[18px] mt-2 text-white">"Using a single learning management system like Canvas LMS streamlines content delivery and communications with students and families."</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <p className="text-[18px] mt-2 text-white">
+            "Using a single learning management system like Canvas LMS
+            streamlines content delivery and communications with students and
+            families."
+          </p>
+        </div>
       </div>
       <div className="lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center">
         <h2 className="lg:text-[40px] text-[30px] font-semibold text-[#091D4F]">

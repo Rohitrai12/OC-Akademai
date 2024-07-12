@@ -1,17 +1,24 @@
 import React from "react";
-import logo from "/logo.png";
-import { FaArrowRight } from "react-icons/fa6";
+import logo from "../assets/Images/logo.png";
+import {
+  FaArrowRight,
+  FaLinkedin,
+  FaTwitterSquare,
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaYoutubeSquare,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-white py-8 px-4 lg:px-20">
+      <footer className="bg-white py-8 px-4 lg:px-20 pt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:ml-[114px]">
-          <div className="flex flex-col items-center lg:items-start">
-            <img src={logo} alt="Logo" className="w-[200px] lg:w-[244px]" />
-            <div className="lg:ml-10 mt-4 lg:mt-0">
-              <p className="font-bold text-[#143d50d0]">GLOBAL HQ</p>
-              <p className="w-full lg:w-[254px] text-[14px] font-[500]">
+          <div className="flex flex-col items-center lg:items-start mt-[-55px]">
+            <img src={logo} alt="Logo" className="w-[200px] lg:w-[244px] mt-8" />
+            <div className="lg:ml-10  lg:mt-0 mt-10">
+              <p className=" font-medium text-[#41707f]">GLOBAL HQ</p>
+              <p className="w-full lg:w-[189px] text-[14px] font-[500]">
                 6330 South 3000 East Suite 700 Salt Lake City, UT 84121 USA
               </p>
               <div className="mt-4 lg:mt-10 font-semibold text-red-600">
@@ -28,7 +35,7 @@ const Footer = () => {
             <h4 className="text-[14px] font-[700] mb-4">
               INSTRUCTURE LEARNING PLATFORM
             </h4>
-            <div className="space-y-2">
+            <div className="space-y-2 font-medium text-[#41707f]">
               <p>Canvas LMS</p>
               <p>Canvas Studio</p>
               <p>Canvas Catalog</p>
@@ -42,7 +49,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 lg:mt-0">
             <h4 className="text-[14px] font-[700] mb-4">RESOURCES</h4>
-            <div className="space-y-2">
+            <div className="space-y-2 font-medium text-[#41707f]">
               <p>Articles</p>
               <p>Research</p>
               <p>Infographics</p>
@@ -59,7 +66,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 lg:mt-0">
             <h4 className="text-[14px] font-[700] mb-4">EVENTS</h4>
-            <div className="space-y-2">
+            <div className="space-y-2 font-medium text-[#41707f]">
               <p>News & Events</p>
               <p>Webinars</p>
               <p>Media Resources</p>
@@ -73,7 +80,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 lg:mt-0">
             <h4 className="text-[14px] font-[700] mb-4">ABOUT US</h4>
-            <div className="space-y-2">
+            <div className="space-y-2 font-medium text-[#41707f]">
               <p>Our Story</p>
               <p>Leadership</p>
               <p>Partners</p>
@@ -88,7 +95,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-4 flex justify-center space-x-4 text-sm text-gray-600 flex-wrap">
+        <div className="mt-8 pt-4 flex justify-center space-x-4 text-sm text-gray-600 flex-wrap font-semibold">
           <p className="hover:text-red-600 cursor-pointer">Privacy |</p>
           <p className="hover:text-red-600 cursor-pointer">
             California Privacy Notice |
@@ -104,11 +111,18 @@ const Footer = () => {
           <p className="hover:text-red-600 cursor-pointer">Status |</p>
         </div>
       </footer>
-      <div className="bg-gray-200 py-4 text-center text-sm text-gray-600 mt-[-14px]">
+      <div className="bg-gray-200 py-4 text-center text-sm text-gray-600 mt-[-14px] flex flex-wrap justify-center items-center px-[25px] gap-[92px]">
         <p>
           Copyright © 2008-2024 Akademai. All rights reserved. Various
           trademarks held by their respective owners.
         </p>
+        <div className="flex space-x-4 text-[22px]">
+          <FaLinkedin className="cursor-pointer hover:text-red-600" />
+          <FaTwitterSquare className="cursor-pointer hover:text-red-600" />
+          <FaFacebookSquare className=" cursor-pointer hover:text-red-600" />
+          <FaInstagramSquare className="cursor-pointer hover:text-red-600" />
+          <FaYoutubeSquare className="cursor-pointer hover:text-red-600" />
+        </div>
       </div>
     </div>
   );
