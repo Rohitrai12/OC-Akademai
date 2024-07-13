@@ -21,7 +21,7 @@ const OurAward = () => {
           <img
             src={One}
             alt=""
-            className="lg:absolute relative xl:left-[296px] lg:w-auto w-[40%]"
+            className="lg:absolute relative xl:left-[296px] lg:w-auto w-[100%]"
           />
         </ScrollAnimation>
         <ScrollAnimation
@@ -33,7 +33,7 @@ const OurAward = () => {
           <img
             src={Two}
             alt=""
-            className="lg:absolute relative lg:left-[181px] xl:left-[481px]  lg:top-[50px] lg:w-auto w-[40%]"
+            className="lg:absolute relative lg:left-[181px] xl:left-[481px]  lg:top-[50px] lg:w-auto w-[100%]"
           />
         </ScrollAnimation>
       </div>
@@ -48,7 +48,7 @@ const OurAward = () => {
           <img
             src={Three}
             alt=""
-            className="lg:absolute relative lg:left-[600px] xl:left-[800px] lg:top-[50px] lg:w-auto w-[40%]"
+            className="lg:absolute relative lg:left-[600px] xl:left-[800px] lg:top-[50px] lg:w-auto w-[100%]"
           />
         </ScrollAnimation>
         <ScrollAnimation
@@ -60,7 +60,7 @@ const OurAward = () => {
           <img
             src={Four}
             alt=""
-            className="lg:absolute relative  lg:left-[730px] xl:left-[930px] lg:top-[340px] lg:w-auto w-[40%]"
+            className="lg:absolute relative  lg:left-[730px] xl:left-[930px] lg:top-[340px] lg:w-auto w-[100%]"
           />
         </ScrollAnimation>
       </div>
@@ -74,7 +74,7 @@ const OurAward = () => {
           <img
             src={Five}
             alt=""
-            className="lg:absolute relative lg:left-[500px] xl:left-[700px] lg:top-[450px]  lg:w-auto w-[40%]"
+            className="lg:absolute relative lg:left-[500px] xl:left-[700px] lg:top-[450px]  lg:w-auto w-[100%]"
           />
         </ScrollAnimation>
         <ScrollAnimation
@@ -86,7 +86,7 @@ const OurAward = () => {
           <img
             src={Six}
             alt=""
-            className="lg:absolute relative lg:left-[10px] xl:left-[10px] lg:top-[700px]  lg:w-auto w-[40%]"
+            className="lg:absolute relative lg:left-[10px] xl:left-[10px] lg:top-[700px]  lg:w-auto w-[100%]"
           />
         </ScrollAnimation>
       </div>
@@ -96,14 +96,14 @@ const OurAward = () => {
         animateIn="animate__zoomIn"
         animateOnce={true}
         duration={1.5}
-        delay={100}
+        d
       >
         <div
           className="lg:p-10 p-5 xl:p-20 bg-[white] rounded-xl z-0 m-auto lg:m-0 relative lg:w-[40%] w-[95%] top-[50px] lg:top-[330px] lg:left-[50px] xl:left-[80px]"
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
         >
           <h4 className="text-[#143D50] text-[12px] ">OUR AWARDS</h4>
-          <h2 className="lg:text-[40px] text-[35px]  text-[#091D4F] font-semibold">
+          <h2 className="lg:text-[40px] text-[24px] md:text-[35px]  text-[#091D4F] font-semibold">
             Thanks for the gold stars.
           </h2>
           <p className="text-[16px] text-[#143D50]">

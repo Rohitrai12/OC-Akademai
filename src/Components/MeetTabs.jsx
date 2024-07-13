@@ -15,7 +15,7 @@ function MeetTabs() {
   };
 
   return (
-    <div className="container m-auto tabs-container">
+    <div className="container mt-10 lg:mt-2  m-auto tabs-container">
       <div className="flex justify-around lg:w-[35%] w-[70%] m-auto cursor-pointer ">
         <ScrollAnimation
           animateIn="animate__backInDown"
@@ -26,8 +26,8 @@ function MeetTabs() {
           <div
             className={
               activeTab === 1
-                ? "tab active-tab text-[#091D4F] font-bold text-[18px]  border-b-4 pb-3 border-[#091D4F]"
-                : "tab text-[#091D4F]  text-[18px] font-semibold"
+                ? "tab active-tab text-[#091D4F] font-bold lg:text-[18px] text-[16px]  border-b-4 pb-3 border-[#091D4F]"
+                : "tab text-[#091D4F]  lg:text-[18px] text-[16px]   font-semibold"
             }
             onClick={() => handleTabClick(1)}
           >
@@ -43,8 +43,8 @@ function MeetTabs() {
           <div
             className={
               activeTab === 2
-                ? "tab active-tab  text-[#091D4F] font-bold text-[18px]  border-b-4 pb-3 border-[#091D4F]"
-                : "tab text-[#091D4F]  text-[18px] font-semibold"
+                ? "tab active-tab  text-[#091D4F] font-bold lg:text-[18px] text-[16px]   border-b-4 pb-3 border-[#091D4F]"
+                : "tab text-[#091D4F]  lg:text-[18px] text-[16px]  font-semibold"
             }
             onClick={() => handleTabClick(2)}
           >
@@ -60,8 +60,8 @@ function MeetTabs() {
           <div
             className={
               activeTab === 3
-                ? "tab active-tab text-[#091D4F] font-bold text-[18px]  border-b-4 pb-3 border-[#091D4F]"
-                : "tab text-[#091D4F]  text-[18px] font-semibold"
+                ? "tab active-tab text-[#091D4F] font-bold  lg:text-[18px] text-[16px]   border-b-4 pb-3 border-[#091D4F]"
+                : "tab text-[#091D4F]  lg:text-[18px] text-[16px]  font-semibold"
             }
             onClick={() => handleTabClick(3)}
           >
@@ -179,7 +179,7 @@ function MeetTabs() {
               <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
                 <img src={Logo} alt="" className="m-auto lg:m-0" />
 
-                <h2 className="text-[29px] text-[#091D4F] font-semibold">
+                <h2 className="lg:text-[29px] text-[22px] text-[#091D4F] font-semibold">
                   Assessment. For Learning.
                 </h2>
                 <p className="text-[16px] text-[#143D50]">

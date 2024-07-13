@@ -5,7 +5,7 @@ import "animate.css/animate.min.css";
 
 const RegisterOpen = () => {
   return (
-    <div className="container lg:flex justify-evenly items-center mt-10 m-auto">
+    <div className="container lg:flex justify-evenly items-center mt-5 lg:mt-10 m-auto">
       <ScrollAnimation 
         animateIn="animate__fadeInLeft" 
         animateOnce={true} 
@@ -25,7 +25,7 @@ const RegisterOpen = () => {
           <h4 className="text-[#143D50] text-[12px] ">
             JULY 9TH - 11TH, 2024 | VENETIAN RESORT, LAS VEGAS
           </h4>
-          <h2 className="lg:text-[40px] text-[35px] text-[#091D4F] font-semibold">
+          <h2 className="lg:text-[40px] py-2 lg:py-0 text-[24px] md:text-[35px] text-[#091D4F] font-semibold">
             InstructureCon '24 <br />
             Registration is Open
           </h2>

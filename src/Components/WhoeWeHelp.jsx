@@ -37,10 +37,10 @@ const WhoeWeHelp = () => {
   }, []);
 
   return (
-    <div className="container m-auto">
+    <div className="container m-auto mt-10 lg:mt-0">
       <div className="lg:w-[35%] w-[95%] m-auto mt-5 lg:py-16 text-center animate-on-scroll">
         <h4 className="text-[#143D50] text-[12px] font-medium ">WHO WE HELP</h4>
-        <h2 className="lg:text-[40px] text-[35px] text-[#091D4F] font-semibold">
+        <h2 className="lg:text-[40px] md:text-[35px] text-[24px]  text-[#091D4F] font-semibold">
           Instructure Love for Every <br />
           Level of Learning
         </h2>
@@ -49,8 +49,8 @@ const WhoeWeHelp = () => {
       <div className="lg:flex justify-evenly">
         <div className="text-center lg:w-[25%] w-[80%] m-auto lg:m-0 animate-on-scroll">
           <img src={Help1} alt="" className="m-auto w-[55%]" />
-          <h3 className="text-[#091D4F] text-[30px] font-semibold">K-12</h3>
-          <p className="text-[16px] text-[#143D50]">
+          <h3 className="text-[#091D4F] text-[20px] lg:text-[30px] font-semibold">K-12</h3>
+          <p className="lg:text-[16px] text-[14px] text-[#143D50]">
             A lot changes between that K and that 12. Our platform supports
             every student, at every stage, in any environment.
           </p>
@@ -70,8 +70,8 @@ const WhoeWeHelp = () => {
         </div>
         <div className="text-center lg:w-[25%] w-[80%] m-auto lg:m-0 animate-on-scroll">
           <img src={Help2} alt="" className="m-auto w-[55%]" />
-          <h3 className="text-[#091D4F] text-[30px] font-semibold">Higher Ed</h3>
-          <p className="text-[16px] text-[#143D50]">
+          <h3 className="text-[#091D4F] text-[20px] lg:text-[30px] font-semibold">Higher Ed</h3>
+          <p className="lg:text-[16px] text-[14px] text-[#143D50]">
             Our solutions make educators
             more effective and students
             more successful, both in school
@@ -93,8 +93,8 @@ const WhoeWeHelp = () => {
         </div>
         <div className="text-center lg:w-[25%] w-[80%] m-auto lg:m-0 animate-on-scroll">
           <img src={Help3} alt="" className="m-auto w-[55%]" />
-          <h3 className="text-[#091D4F] text-[30px] font-semibold">Professional Ed</h3>
-          <p className="text-[16px] text-[#143D50]">
+          <h3 className="text-[#091D4F]text-[20px] lg:text-[30px] font-semibold">Professional Ed</h3>
+          <p className="lg:text-[16px] text-[14px] text-[#143D50]">
             To work is to learn. But when
             work takes extra learning, our
             tools make it extra intuitive,

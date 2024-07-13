@@ -6,7 +6,7 @@ import "animate.css/animate.min.css";
 const Meet = () => {
   return (
     <div>
-      <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:py-16 text-center">
+      <div className="container lg:w-[35%] w-[95%] m-auto lg:mt-5 mt-10 lg:py-16 text-center">
         <ScrollAnimation
           animateIn="animate__backInLeft"
           animateOnce={true}
@@ -19,7 +19,7 @@ const Meet = () => {
           animateOnce={true}
           duration={1.5} // Adjust duration for smoother transition
         >
-          <h2 className="lg:text-[40px] text-[35px] text-[#091D4F] font-semibold">
+          <h2 className="lg:text-[40px] text-[24px] py-2 lg:py-0  lmd:text-[35px] text-[#091D4F] font-semibold">
             The Instructure Learning <br />
             Platform
           </h2>
