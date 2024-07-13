@@ -91,7 +91,7 @@ function MeetTabs() {
                   <p className="text-[16px] text-[#143D50]">
                     The tools you need for teaching and learning in one place.
                     Connection between teachers, students, and families,
-                    wherever learning happens with Canvas by Instructure.
+                    wherever learning happens with Akademiaby Instructure.
                   </p>
 
                 <div className="flex justify-center lg:justify-start">

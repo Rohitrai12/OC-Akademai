@@ -36,9 +36,9 @@ const Footer = () => {
               INSTRUCTURE LEARNING PLATFORM
             </h4>
             <div className="space-y-2 font-medium text-[#41707f]">
-              <p>Canvas LMS</p>
-              <p>Canvas Studio</p>
-              <p>Canvas Catalog</p>
+              <p>AkademiaLMS</p>
+              <p>AkademiaStudio</p>
+              <p>AkademiaCatalog</p>
               <p>Assessment</p>
               <p>Impact</p>
               <p>LearnPlatform</p>
@@ -60,7 +60,7 @@ const Footer = () => {
               <p>CENTERS</p>
               <p>The Study Hall</p>
               <p>Our Community</p>
-              <p>Canvas Network</p>
+              <p>AkademiaNetwork</p>
               <p>Integrations</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Footer = () => {
               <p>Partners</p>
               <p>Careers</p>
               <p>Investor Relations</p>
-              <p>Canvas Overview</p>
+              <p>AkademiaOverview</p>
               <p>Evidence as a Service</p>
               <p>Privacy</p>
               <p>Security</p>
