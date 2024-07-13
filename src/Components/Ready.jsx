@@ -1,10 +1,17 @@
 import React from 'react'
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 const Ready = () => {
   return (
     <div className='bg-[#091D4F] p-20 '>
       <div className='container m-auto'>
-<p className='font-semibold text-center text-white lg:text-[40px] text-[30px]'>Ready to explore our learning ecosystem?</p>
+      <ScrollAnimation
+          animateIn="animate__backInDown"
+          animateOnce={true}
+          duration={1.2}
+        >
+          <p className='font-semibold text-center text-white lg:text-[40px] text-[30px]'>Ready to explore our learning ecosystem?</p>
 <button
           className="mt-8 block m-auto px-6 w-fit rounded-full p-3 bg-[white] text-[#091D4F] font-semibold"
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
@@ -36,6 +43,9 @@ const Ready = () => {
             </defs>
           </svg>
         </button>{" "}
+                </ScrollAnimation>
+
+
       </div>
     </div>
   )

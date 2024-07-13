@@ -30,7 +30,11 @@ const Crafting = () => {
           </p>
           <img src={Img2} alt="" />
         </div>
-
+        <ScrollAnimation
+          animateIn="animate__backInLeft"
+          animateOnce={true}
+          duration={1.2}
+        >
         <div className="w-[95%] bg-[#091D4F] p-5 lg:m-0 mt-4 lg:mt-0 m-auto  lg:absolute rounded-xl md:w-[420px] lg:left-[200px] lg:top-[437px] lg:text-left text-center">
           <img src={Qoute} alt="" />
 
@@ -40,9 +44,15 @@ const Crafting = () => {
             families."
           </p>
         </div>
+        </ScrollAnimation>
       </div>
-
+  
       <div className="lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center">
+      <ScrollAnimation
+          animateIn="animate__backInRight"
+          animateOnce={true}
+          duration={1.2}
+        >
         <h2 className="lg:text-[40px] text-[30px] font-semibold text-[#091D4F]">
           Crafting Consistency with Canvas LMS
         </h2>
@@ -82,6 +92,8 @@ const Crafting = () => {
             </defs>
           </svg>
         </button>
+        </ScrollAnimation>
+
       </div>
     </div>
   );
