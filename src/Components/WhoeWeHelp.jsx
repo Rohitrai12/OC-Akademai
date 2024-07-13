@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Help1 from "../assets/Images/help-1.png";
 import Help2 from "../assets/Images/help-2.png";
 import Help3 from "../assets/Images/help-3.png";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 const WhoeWeHelp = () => {
   useEffect(() => {
