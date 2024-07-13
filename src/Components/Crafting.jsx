@@ -17,11 +17,6 @@ const Crafting = () => {
           <img src={Img} alt="" />
         </ScrollAnimation>
 
-        <ScrollAnimation
-          animateIn="animate__backInDown"
-          animateOnce={true}
-          duration={1.2}
-        >
         <div
           className="lg:m-0 m-auto lg:absolute p-5 mt-4 lg:mt-0  bg-[white] rounded-xl z-10 md:w-[280px]  w-[95%] lg:top-[240px] lg:left-[432px] lg:text-left text-center "
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
@@ -35,7 +30,6 @@ const Crafting = () => {
           </p>
           <img src={Img2} alt="" />
         </div>
-        </ScrollAnimation>
 
         <div className="w-[95%] bg-[#091D4F] p-5 lg:m-0 mt-4 lg:mt-0 m-auto  lg:absolute rounded-xl md:w-[420px] lg:left-[200px] lg:top-[437px] lg:text-left text-center">
           <img src={Qoute} alt="" />
@@ -47,7 +41,7 @@ const Crafting = () => {
           </p>
         </div>
       </div>
-      
+
       <div className="lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center">
         <h2 className="lg:text-[40px] text-[30px] font-semibold text-[#091D4F]">
           Crafting Consistency with Canvas LMS
