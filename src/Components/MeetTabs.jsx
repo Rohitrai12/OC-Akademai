@@ -3,6 +3,8 @@ import Img1 from "../assets/Images/tab1.png";
 import Img2 from "../assets/Images/tab2.png";
 import Img3 from "../assets/Images/imgtab3.png";
 import Logo from "../assets/Images/ak-logo.png";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 function MeetTabs() {
   const [activeTab, setActiveTab] = useState(1); // State to manage active tab
@@ -14,6 +16,12 @@ function MeetTabs() {
   return (
     <div className="container m-auto tabs-container">
       <div className="flex justify-around lg:w-[35%] w-[70%] m-auto cursor-pointer ">
+      <ScrollAnimation 
+        animateIn="animate__backInDown" 
+        animateOnce={true} 
+        duration={1.5} // Adjust duration for smoother transition
+        // Add delay to make it smoother
+      >
         <div
           className={
             activeTab === 1
@@ -24,6 +32,13 @@ function MeetTabs() {
         >
           Canvas
         </div>
+        </ScrollAnimation>
+        <ScrollAnimation 
+        animateIn="animate__backInDown" 
+        animateOnce={true} 
+        duration={1.5} // Adjust duration for smoother transition
+        // Add delay to make it smoother
+      >
         <div
           className={
             activeTab === 2
@@ -34,6 +49,13 @@ function MeetTabs() {
         >
           Mastery
         </div>
+        </ScrollAnimation>
+        <ScrollAnimation 
+        animateIn="animate__backInDown" 
+        animateOnce={true} 
+        duration={1.5} // Adjust duration for smoother transition
+        // Add delay to make it smoother
+      >
         <div
           className={
             activeTab === 3
@@ -44,6 +66,7 @@ function MeetTabs() {
         >
           Impact
         </div>
+        </ScrollAnimation>
       </div>
       <div className=" border border-b-[#D9D9D9] w-[85%] m-auto"></div>
 
