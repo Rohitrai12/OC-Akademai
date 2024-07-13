@@ -143,7 +143,7 @@ function MeetTabs() {
         {activeTab === 2 && (
           <div>
             <div className=" lg:flex justify-evenly items-center mt-16 m-auto lg:mx-0">
-              <div className="w-[669px]">
+              <div className="">
                 <img src={Img2} alt="" className="m-auto lg:m-0" />
               </div>
 
@@ -201,7 +201,7 @@ function MeetTabs() {
         {activeTab === 3 && (
           <div>
             <div className=" lg:flex justify-evenly items-center mt-16 m-auto lg:mx-0">
-              <div className="w-[594px]">
+              <div className="">
                 <img src={Img3} alt="" className="m-auto lg:m-0" />
               </div>
 
