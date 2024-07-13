@@ -3,13 +3,18 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
 
-.Banner{
-    background-image: url(./assets/Images/Banner-img.png);
-    background-repeat: no-repeat;
-  width: 100%;
+.Banner {
+  background-image: url(./assets/Images/BannerImg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
+
 .inika-bold {
-    font-family: "Inika";
-    font-weight: 700;
-    font-style: normal;
-  }
+  font-family: "Inika";
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: #dcedf3e3
+}
