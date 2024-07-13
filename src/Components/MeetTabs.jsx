@@ -97,7 +97,7 @@ function MeetTabs() {
                 <div className="flex justify-center lg:justify-start">
             
                     <button
-                      className="mt-8 px-6 w-fit rounded-full p-3 bg-[#FF6534] text-white font-semibold"
+                      className="mt-8 lg:px-6 px-3 w-fit rounded-full p-3 bg-[#FF6534] text-white font-semibold"
                       style={{
                         boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)",
                       }}
@@ -132,7 +132,7 @@ function MeetTabs() {
                   
               
                     <button
-                      className="mt-8 px-6 ml-2 w-fit rounded-full p-3 bg-[#091D4F] text-white font-semibold"
+                      className="mt-8 lg:px-6 px-3 ml-2 w-fit rounded-full p-3 bg-[#091D4F] text-white font-semibold"
                       style={{
                         boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)",
                       }}
@@ -190,7 +190,7 @@ function MeetTabs() {
 
                 <div className="flex justify-center lg:justify-start">
                   <button
-                    className="mt-8 px-6 ml-2 w-fit rounded-full p-3 bg-[#091D4F] text-white font-semibold"
+                    className="mt-8 lg:px-6 px-3 ml-2 w-fit rounded-full p-3 bg-[#091D4F] text-white font-semibold"
                     style={{
                       boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)",
                     }}
@@ -248,7 +248,7 @@ function MeetTabs() {
 
                 <div className="flex justify-center lg:justify-start">
                   <button
-                    className="mt-8 px-6 w-fit rounded-full p-3 bg-[#FF6534] text-white font-semibold"
+                    className="mt-8 lg:px-6 px-3w-fit rounded-full p-3 bg-[#FF6534] text-white font-semibold"
                     style={{
                       boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)",
                     }}
@@ -281,7 +281,7 @@ function MeetTabs() {
                     </svg>
                   </button>{" "}
                   <button
-                    className="mt-8 px-6 ml-2 w-fit rounded-full p-3 bg-[#091D4F] text-white font-semibold"
+                    className="mt-8 lg:px-6 px-3 ml-2 w-fit rounded-full p-3 bg-[#091D4F] text-white font-semibold"
                     style={{
                       boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)",
                     }}
