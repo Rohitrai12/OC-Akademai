@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/applied-sans-pro');
 
 .Banner {
   background-image: url(./assets/Images/BannerImg.png);
@@ -14,8 +15,8 @@
 body {
   background-color: #dcedf3e3;
   font-family: sans-serif;
+  font-family: a;
 }
-
 
 
 .animate-on-scroll {
@@ -39,4 +40,3 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-

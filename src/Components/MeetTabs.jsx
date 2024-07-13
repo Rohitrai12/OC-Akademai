@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Img1 from "../assets/Images/tab1.png";
 import Img2 from "../assets/Images/tab2.png";
 import Img3 from "../assets/Images/imgtab3.png";
-import Logo from "../assets/Images/ak-logo.png";
+import Logo from "../assets/Images/Akademai.png";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -81,7 +81,7 @@ function MeetTabs() {
               </div>
 
               <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
-                <img src={Logo} alt="" className="m-auto lg:m-0" />
+                <img src={Logo} alt="" className="m-auto lg:m-0 w-[364px] ml-[-62px] mb-[15px]" />
              
                   <h2 className="text-[29px] text-[#091D4F] font-semibold">
                     The World's #1 Teaching, Learning Software, Scholarships,
@@ -91,7 +91,7 @@ function MeetTabs() {
                   <p className="text-[16px] text-[#143D50]">
                     The tools you need for teaching and learning in one place.
                     Connection between teachers, students, and families,
-                    wherever learning happens with Akademiaby Instructure.
+                    wherever learning happens with Canvas by Instructure.
                   </p>
 
                 <div className="flex justify-center lg:justify-start">
