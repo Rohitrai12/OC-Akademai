@@ -3,8 +3,9 @@ import Img1 from "../assets/Images/tab1.png";
 import Img2 from "../assets/Images/tab2.png";
 import Img3 from "../assets/Images/imgtab3.png";
 import Logo from "../assets/Images/ak-logo.png";
-import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
+
 
 function MeetTabs() {
   const [activeTab, setActiveTab] = useState(1); // State to manage active tab
@@ -74,50 +75,27 @@ function MeetTabs() {
         {activeTab === 1 && (
           <div>
             <div className=" lg:flex justify-evenly items-center mt-16 m-auto lg:mx-0">
-              <div className="">
-              <ScrollAnimation
-                  animateIn="animate__backInLeft"
-                  animateOnce={true}
-                  duration={1.5}
-                  delay={0.3}
-                >
-                <img src={Img1} alt="" className="m-auto lg:m-0" />
-                </ScrollAnimation>
-
+              <div className="animate__animated  animate__backInLeft">
+              
+                  <img src={Img1} alt="" className="m-auto lg:m-0" />
               </div>
 
-              <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center">
+              <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
                 <img src={Logo} alt="" className="m-auto lg:m-0" />
-                <ScrollAnimation
-                  animateIn="animate__backInRight"
-                  animateOnce={true}
-                  duration={1.5}
-                >
+             
                   <h2 className="text-[29px] text-[#091D4F] font-semibold">
                     The World's #1 Teaching, Learning Software, Scholarships,
                     University Bank
                   </h2>
-                </ScrollAnimation>
-                <ScrollAnimation
-                  animateIn="animate__backInRight"
-                  animateOnce={true}
-                  duration={1.5}
-                  delay={0.3}
-                >
+             
                   <p className="text-[16px] text-[#143D50]">
                     The tools you need for teaching and learning in one place.
                     Connection between teachers, students, and families,
                     wherever learning happens with Canvas by Instructure.
                   </p>
-                </ScrollAnimation>
 
                 <div className="flex justify-center lg:justify-start">
-                  <ScrollAnimation
-                    animateIn="animate__backInDown"
-                    animateOnce={true}
-                    duration={1.5}
-                    delay={0.3}
-                  >
+            
                     <button
                       className="mt-8 px-6 w-fit rounded-full p-3 bg-[#FF6534] text-white font-semibold"
                       style={{
@@ -151,13 +129,8 @@ function MeetTabs() {
                         </defs>
                       </svg>
                     </button>{" "}
-                  </ScrollAnimation>
-                  <ScrollAnimation
-                    animateIn="animate__backInDown"
-                    animateOnce={true}
-                    duration={1.5}
-                    delay={0.3}
-                  >
+                  
+              
                     <button
                       className="mt-8 px-6 ml-2 w-fit rounded-full p-3 bg-[#091D4F] text-white font-semibold"
                       style={{
@@ -191,7 +164,6 @@ function MeetTabs() {
                         </defs>
                       </svg>
                     </button>
-                  </ScrollAnimation>
                 </div>
               </div>
             </div>
@@ -200,11 +172,11 @@ function MeetTabs() {
         {activeTab === 2 && (
           <div>
             <div className=" lg:flex justify-evenly items-center mt-16 m-auto lg:mx-0">
-              <div className="">
+              <div className="animate__animated  animate__backInLeft">
                 <img src={Img2} alt="" className="m-auto lg:m-0" />
               </div>
 
-              <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center">
+              <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
                 <img src={Logo} alt="" className="m-auto lg:m-0" />
 
                 <h2 className="text-[29px] text-[#091D4F] font-semibold">
@@ -258,11 +230,11 @@ function MeetTabs() {
         {activeTab === 3 && (
           <div>
             <div className=" lg:flex justify-evenly items-center mt-16 m-auto lg:mx-0">
-              <div className="">
+              <div className="animate__animated  animate__backInLeft">
                 <img src={Img3} alt="" className="m-auto lg:m-0" />
               </div>
 
-              <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center">
+              <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
                 <img src={Logo} alt="" className="m-auto lg:m-0" />
 
                 <h2 className="text-[29px] text-[#091D4F] font-semibold">
