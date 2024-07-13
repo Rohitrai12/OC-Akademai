@@ -16,3 +16,27 @@ body {
   font-family: sans-serif;
 }
 
+
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-pop {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-pop.is-triggered {
+  opacity: 1;
+  transform: translateY(0);
+}
+
