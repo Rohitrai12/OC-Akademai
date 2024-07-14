@@ -7,19 +7,21 @@ const Banner = () => {
     <div className="container m-auto  Banner lg:h-[700px] h-[500px] mt-[82px] lg:mt-[195px]">
       <div className="m-auto ">
         <div
-          className="container px-8 lg:px-10 py-8 lg:py-14  rounded-2xl m-auto lg:m-0 relative bg-[#ffff] lg:left-60 animate__animated  animate__backInDown w-[90%] lg:w-[409px] lg:h-[500px]" 
+          className="container px-8 lg:px-10 py-8 lg:py-14  rounded-2xl m-auto lg:m-0 relative bg-[#ffff] lg:left-60 animate__animated  animate__backInDown w-[90%] lg:w-[409px]"
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
         >
-          <img src={Logo} alt="" className="w-[264px] ml-[-6px]"/>
-          <h1 className="text-[35px] py-2 lg:py-0 md:text-[35px] mb-[22px] inika-bold text-[#091D4F] text-left w-[388px] font-bold">
-            Yes, You Can <br />
+          <img src={Logo} alt="" className="w-[264px] ml-[-6px]" />
+          <h1 className="text-[35px] py-2 lg:py-0 md:text-[35px] inika-bold text-[#091D4F] text-left w-[388px] font-bold">
+            Yes, Dreams are delivered <br />
             with OC <span className="text-[#E4060F]">Akademia</span>{" "}
           </h1>
           <p className="text-[16px] text-[#143D50]">
-            Deliver dynamic learning experiences to every student, everywhere.
-            Take teaching and learning to the next level with Canvas, the #1
-            educational software, and the foundation of the Instructure Learning
-            Platform.
+            Every academic dream is brought to life through unique and
+            personalized learning experiences tailored to each student, no
+            matter where they are. Experience modern, customized teaching and
+            learning with OC <span className="text-[#E4060F]">Akademia</span>,
+            an advanced educational software and the flagship product of the
+            Jovanotti Learning Platform.
           </p>
 
           <button

@@ -23,10 +23,10 @@ const Crafting = () => {
         >
           <h4 className="text-[#143D50] text-[14px] ">FEATURED CUSTOMER</h4>
           <h2 className="lg:text-[24px] text-[20px]  text-[#091D4F] font-semibold">
-            Poway Unified School District
+            University of Bologna
           </h2>
           <p className="text-[16px] text-[rgb(20,61,80)]">
-            Michael Gizzo, High School Assistant Principal
+            Kalyango Jovan, Phd Candidate
           </p>
           <img src={Img2} alt="" className="w-[89px]" />
         </div>
@@ -40,7 +40,7 @@ const Crafting = () => {
 
             <p className="lg:text-[18px] text-[16px] mt-2 text-white">
               "Using a single learning management system like{" "}
-              <span className="text-[#E4060F]"> Akademia</span> LMS streamlines
+              <span className="text-[#E4060F]">Akademia</span> LMS streamlines
               content delivery and communications with students and families."
             </p>
           </div>
@@ -54,14 +54,14 @@ const Crafting = () => {
           duration={1.2}
         >
           <h2 className="lg:text-[40px] text-[24px] md:text-[30px] font-semibold text-[#091D4F]">
-            Crafting Consistency with
-            <span className="text-[#E4060F]"> Akademia</span> LMS
+            A Centralised learning point with{" "}
+            <span className="text-[#E4060F]">Akademia</span> LMS
           </h2>
           <p className="text-[16px] text-[#143D50] ">
-            Discover how Poway Unified School District identified enduring
-            digital learning practices to prepare their students, teachers, and
-            families for the future with{" "}
-            <span className="text-[#E4060F]"> Akademia</span> LMS.
+            Discover how the University of Bologna identified lasting digital
+            learning practices to prepare their students, teachers, and families
+            for the future with <span className="text-[#E4060F]">Akademia</span>{" "}
+            LMS.
           </p>
           <button
             className="mt-8 px-6 w-fit rounded-full p-3 bg-[#091D4F] text-[white] font-semibold"

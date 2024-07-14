@@ -12,7 +12,7 @@ const Meet = () => {
           animateOnce={true}
           duration={1.5} // Adjust duration for smoother transition
         >
-          <h4 className="text-[#143D50] text-[12px] ">Meet</h4>
+          <h4 className="text-[#143D50] text-[12px] ">MEET</h4>
         </ScrollAnimation>
         <ScrollAnimation
           animateIn="animate__backInRight"
@@ -20,7 +20,7 @@ const Meet = () => {
           duration={1.5} // Adjust duration for smoother transition
         >
           <h2 className="lg:text-[40px] text-[24px] py-2 lg:py-0  lmd:text-[35px] text-[#091D4F] font-semibold">
-            The Instructure Learning <br />
+            The Jovanotti Learning <br />
             Platform
           </h2>
         </ScrollAnimation>
@@ -30,7 +30,9 @@ const Meet = () => {
           duration={1.5} // Adjust duration for smoother transition
         >
           <p className="text-[16px] text-[#143D50]">
-            Every lesson has the power to change lives. Even more so with our
+            Every akademic dream matters! 
+            Every active lesson sparks the power to change lives! 
+            Even more the
             teaching and learning solutions in your corner.
           </p>
         </ScrollAnimation>

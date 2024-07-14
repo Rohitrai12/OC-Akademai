@@ -102,13 +102,18 @@ const OurAward = () => {
           className="lg:p-10 p-5 xl:p-20 bg-[white] rounded-xl z-0 m-auto lg:m-0 relative lg:w-[40%] w-[95%] top-[50px] lg:top-[330px] lg:left-[50px] xl:left-[80px]"
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
         >
-          <h4 className="text-[#143D50] text-[12px] ">OUR AWARDS</h4>
+          <h4 className="text-[#143D50] text-[12px] ">
+            OUR STUDENT AS EVIDENCE
+          </h4>
           <h2 className="lg:text-[40px] text-[24px] md:text-[35px]  text-[#091D4F] font-semibold">
-            Thanks for the gold stars.
+            Thank you for the recommendations from both parents and students.
           </h2>
           <p className="text-[16px] text-[#143D50]">
-            Education means everything to us. So it feels extra awesome when
-            Instructure gets recognized by the educational community.
+            Education is at the heart of everything we do. That's why it's
+            especially gratifying when Jovanotti receives recognition from the
+            educational community. It reaffirms our commitment to providing
+            exceptional learning experiences and underscores the impact of our
+            efforts on students and educators alike
           </p>
           <button
             className="mt-8 px-6 w-fit rounded-full p-3 bg-[white] text-[#091D4F] font-semibold"

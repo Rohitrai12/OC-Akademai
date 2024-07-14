@@ -19,35 +19,37 @@ const Footer = () => {
               src={logo}
               alt="Logo"
               className="w-[130px] ml-[28px] mb-[31px]"
-            />
-            <div className="lg:ml-10  lg:mt-0 mt-[5px]">
+            />{" "}
+            <div className="lg:ml-10  lg:mt-0 mt-10">
               <p className=" font-medium text-[#41707f]">GLOBAL HQ</p>
               <p className="w-full lg:w-[189px] text-[14px] font-[500]">
-                6330 South 3000 East Suite 700 Salt Lake City, UT 84121 USA
+                Via Adelaide Ristori, 13D, 40127, Bologna, BO, Italy
               </p>
               <div className="mt-4 lg:mt-10 font-semibold text-red-600">
                 <p className="flex items-center gap-2 lg:gap-4">
                   CONTACT US <FaArrowRight />
                 </p>
                 <p className="mt-2 lg:mt-4 flex items-center gap-2 lg:gap-4">
-                  800-203-6755 <FaArrowRight />
+                  +393494333088 <FaArrowRight />
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
             <h4 className="text-[14px] font-[700] mb-4">
-              INSTRUCTURE LEARNING PLATFORM
+              JOVANOTTI LEARNING PLATFORM
             </h4>
             <div className="space-y-2 font-medium text-[#41707f]">
-              <p>AkademiaLMS</p>
-              <p>AkademiaStudio</p>
-              <p>AkademiaCatalog</p>
+              <p>Akademia LMS</p>
+              <p>Akademia Studio</p>
+              <p>Akademia Catalog</p>
+              <p>Akademia BigFigure</p>
+
               <p>Assessment</p>
-              <p>Impact</p>
+              <p>MindSphere</p>
               <p>LearnPlatform</p>
               <p>Services</p>
-              <p>Leadership Development</p>
+              <p>Research and Development</p>
               <p>All Products</p>
             </div>
           </div>
@@ -56,16 +58,15 @@ const Footer = () => {
             <div className="space-y-2 font-medium text-[#41707f]">
               <p>Articles</p>
               <p>Research</p>
-              <p>Infographics</p>
               <p>Guides & e-Books</p>
               <p>Webinars</p>
               <p>Videos</p>
-              <p>Case Studies</p>
+              <p>Motivation to Study</p>
               <p>CENTERS</p>
               <p>The Study Hall</p>
               <p>Our Community</p>
-              <p>AkademiaNetwork</p>
-              <p>Integrations</p>
+              <p>Akademia Network</p>
+              <p>Stack interations</p>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
@@ -90,7 +91,7 @@ const Footer = () => {
               <p>Partners</p>
               <p>Careers</p>
               <p>Investor Relations</p>
-              <p>AkademiaOverview</p>
+              <p>Akademia Overview</p>
               <p>Evidence as a Service</p>
               <p>Privacy</p>
               <p>Security</p>
@@ -102,22 +103,19 @@ const Footer = () => {
         <div className="mt-8 pt-4 flex justify-center space-x-4 text-sm text-gray-600 flex-wrap font-semibold">
           <p className="hover:text-red-600 cursor-pointer">Privacy |</p>
           <p className="hover:text-red-600 cursor-pointer">
-            California Privacy Notice |
+            Eropean Union Privacy Notice |
           </p>
           <p className="hover:text-red-600 cursor-pointer">
             Do Not Sell My Personal Information |
           </p>
-          <p className="hover:text-red-600 cursor-pointer">
-            Modern Slavery Act |
-          </p>
           <p className="hover:text-red-600 cursor-pointer">Acceptable Use |</p>
           <p className="hover:text-red-600 cursor-pointer">Data Processing |</p>
-          <p className="hover:text-red-600 cursor-pointer">Status |</p>
+          <p className="hover:text-red-600 cursor-pointer">Status|</p>
         </div>
       </footer>
       <div className="bg-gray-200 py-4 text-center text-sm text-gray-600 mt-[-14px] flex flex-wrap justify-center items-center px-[25px] gap-[92px]">
         <p>
-          Copyright © 2008-2024 Akademai. All rights reserved. Various
+          Copyright © 2024 jovanotti srl. All rights reserved. Various
           trademarks held by their respective owners.
         </p>
         <div className="flex space-x-4 text-[22px]">
