@@ -11,7 +11,7 @@ const Banner = () => {
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
         >
           <img src={Logo} alt="" className="w-[264px] ml-[-6px]"/>
-          <h1 className="text-[36px] py-2 lg:py-0 md:text-[35px] font-bold inika-bold text-[#091D4F] text-left">
+          <h1 className="text-[35px] py-2 lg:py-0 md:text-[35px] mb-[22px] inika-bold text-[#091D4F] text-left w-[388px] font-bold">
             Yes, You Can <br />
             with OC <span className="text-[#E4060F]">Akademia</span>{" "}
           </h1>
