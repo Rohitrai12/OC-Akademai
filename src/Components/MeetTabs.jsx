@@ -81,7 +81,7 @@ function MeetTabs() {
               </div>
 
               <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
-                <img src={Logo} alt="" className="m-auto lg:m-0 w-[364px] ml-[-62px] mb-[15px]" />
+                <img src={Logo} alt="" className="m-auto lg:m-0 w-[244px] ml-[-15px] mb-[28px]" />
              
                   <h2 className="text-[29px] text-[#091D4F] font-semibold">
                     The World's #1 Teaching, Learning Software, Scholarships,
@@ -177,7 +177,7 @@ function MeetTabs() {
               </div>
 
               <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
-                <img src={Logo} alt="" className="m-auto lg:m-0" />
+                <img src={Logo} alt="" className="m-auto lg:m-0 m-auto lg:m-0 w-[244px] ml-[-15px] mb-[28px]" />
 
                 <h2 className="lg:text-[29px] text-[22px] text-[#091D4F] font-semibold">
                   Assessment. For Learning.
@@ -231,11 +231,11 @@ function MeetTabs() {
           <div>
             <div className=" lg:flex justify-evenly items-center mt-16 m-auto lg:mx-0">
               <div className="animate__animated  animate__backInLeft">
-                <img src={Img3} alt="" className="m-auto lg:m-0" />
+                <img src={Img3} alt="" className="m-auto lg:m-0 w-[604px] ml-[-15px] mb-[28px]" />
               </div>
 
               <div className="container lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center animate__animated  animate__backInRight">
-                <img src={Logo} alt="" className="m-auto lg:m-0" />
+                <img src={Logo} alt="" className="m-auto lg:m-0 w-[244px] ml-[-15px] mb-[28px]" />
 
                 <h2 className="text-[29px] text-[#091D4F] font-semibold">
                   Streamlined edtech adoption. Higher impact.

@@ -146,7 +146,7 @@ function Header() {
         {/* Bottom section */}
         <div className="lg:flex lg:justify-between lg:items-center w-[100%] p-4 items-center lg:bg-transparent bg-white">
           <div>
-            <img src={Logo} alt="Logo" className="h-12" />
+            <img src={Logo} alt="Logo" className="w-[132px] ml-[53px]" />
           </div>
 
           <div className="lg:flex items-center lg:w-[50%] justify-evenly mt-4 lg:mt-0">

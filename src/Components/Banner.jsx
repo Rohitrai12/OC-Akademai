@@ -10,7 +10,7 @@ const Banner = () => {
           className="container px-8 lg:px-10 py-8 lg:py-14  rounded-2xl w-[95%] m-auto lg:m-0 lg:w-[500px] relative bg-[#fff] lg:left-60 animate__animated  animate__backInDown" 
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
         >
-          <img src={Logo} alt="" className="w-[267px] ml-[-43px]"/>
+          <img src={Logo} alt="" className="w-[264px] ml-[-6px]"/>
           <h1 className="lg:text-[46px] text-[24px] py-2 lg:py-0 md:text-[35px] font-bold inika-bold text-[#091D4F] text-left">
             Yes, You Can <br />
             with OC <span className="text-[#E4060F]">Akademia</span>{" "}
