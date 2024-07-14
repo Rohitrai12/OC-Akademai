@@ -10,7 +10,7 @@ import "animate.css/animate.min.css";
 
 const OurAward = () => {
   return (
-    <div className="container m-auto relative h-[997px]">
+    <div className="container m-auto relative  lg:h-[997px]">
       <div className="flex justify-center lg:block">
         <ScrollAnimation
           animateIn="animate__backInLeft"
@@ -21,7 +21,7 @@ const OurAward = () => {
           <img
             src={One}
             alt=""
-            className="lg:absolute relative xl:left-[296px] lg:w-auto w-[100%]"
+            className="lg:absolute relative  xl:left-[296px] lg:w-auto w-[100%]"
           />
         </ScrollAnimation>
         <ScrollAnimation

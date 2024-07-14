@@ -7,7 +7,7 @@ const Banner = () => {
     <div className="container m-auto  Banner lg:h-[700px] h-[500px] mt-[82px] lg:mt-[195px]">
       <div className="m-auto ">
         <div
-          className="container px-8 lg:px-10 py-8 lg:py-14  rounded-2xl m-auto lg:m-0 relative bg-[#ffff] lg:left-60 animate__animated  animate__backInDown w-[409px] h-[500px]" 
+          className="container px-8 lg:px-10 py-8 lg:py-14  rounded-2xl m-auto lg:m-0 relative bg-[#ffff] lg:left-60 animate__animated  animate__backInDown w-[90%] lg:w-[409px] lg:h-[500px]" 
           style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
         >
           <img src={Logo} alt="" className="w-[264px] ml-[-6px]"/>

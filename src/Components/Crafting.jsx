@@ -7,8 +7,8 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const Crafting = () => {
   return (
-    <div className="container m-auto lg:flex justify-around items-center relative lg:mt-0 md:mt-[497px] mt-[200px] pb-10 lg:pb-5">
-      <div className="">
+    <div className="container m-auto lg:flex justify-around items-center relative lg:mt-0  pb-10 lg:pb-5">
+      <div className="lg:mt-0 mt-[77px]">
         <ScrollAnimation
           animateIn="animate__backInDown"
           animateOnce={true}
