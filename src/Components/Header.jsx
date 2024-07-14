@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Images/logo.png";
+import icon from "../assets/Images/browser.png";
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const [navToggle, setNavToggle] = useState(false);
   const [showWhiteBackground, setShowWhiteBackground] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
 
   const toggleInputVisibility = () => {
     setIsVisible(!isVisible);
@@ -13,6 +16,16 @@ function Header() {
 
   const toggleNav = () => {
     setNavToggle(!navToggle);
+  };
+
+  const showDropdown = (link) => {
+    setActiveLink(link);
+    setDropdownVisible(true);
+  };
+
+  const hideDropdown = () => {
+    setDropdownVisible(false);
+    setActiveLink(null);
   };
 
   useEffect(() => {
@@ -28,11 +41,11 @@ function Header() {
   }, []);
 
   return (
-    <div className=" m-auto mb-2 fixed w-[100%] top-0 z-[100]">
+    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100]">
       {/* Navbar toggle button */}
       <button
         onClick={toggleNav}
-        className="m-5 lg:hidden flex justify-center w-8 h-8 bg-transparent text-[#091D4F] float-right   relative rounded-full"
+        className="m-5 lg:hidden flex justify-center w-8 h-8 bg-transparent text-[#091D4F] float-right relative rounded-full"
         style={{ zIndex: "1" }}
       >
         <svg
@@ -60,7 +73,7 @@ function Header() {
           className="w-[100%] bg-white"
           style={{ boxShadow: "0 1px 2px rgba(0, 0, 0, 0.25)" }}
         >
-          <div className="xl:w-[80%] lg:w-[90%]  w-full lg:flex lg:justify-between lg:items-center  bg-white  p-2 items-center m-auto">
+          <div className="xl:w-[80%] lg:w-[90%] w-full lg:flex lg:justify-between lg:items-center bg-white p-2 items-center m-auto">
             <div>
               <select
                 name=""
@@ -83,7 +96,7 @@ function Header() {
               </select>
             </div>
 
-            <div className="lg:flex items-center lg:w-[60%] xl::w-[43%] justify-between mt-4 lg:mt-0">
+            <div className="lg:flex items-center lg:w-[60%] xl:w-[53%%] justify-between mt-4 lg:mt-0">
               <div className="relative">
                 <div
                   className={`p-2 rounded-full flex items-center justify-center ${
@@ -128,7 +141,7 @@ function Header() {
                   </svg>
                 </div>
               </div>
-              <Link to="#" className="lg:inline block font-semibold  m-2">
+              <Link to="#" className="lg:inline block font-semibold m-2">
                 Try Studio Free
               </Link>
               <Link to="#" className="lg:inline block font-semibold m-2">
@@ -139,7 +152,7 @@ function Header() {
               </Link>
               <Link
                 to="/login"
-                className="lg:inline block font-semibold  m-2 bg-[#96D4F7] text-white p-2 w-[120px] rounded-full h-fit text-center"
+                className="lg:inline block font-semibold m-2 bg-[#96D4F7] text-white p-2 w-[120px] rounded-full h-fit text-center"
               >
                 Log In
               </Link>
@@ -147,54 +160,83 @@ function Header() {
           </div>
         </div>
         {/* Bottom section */}
-        <div className="lg:flex lg:justify-between lg:items-center xl:w-[80%] lg:w-[90%]  p-4 items-center lg:bg-transparent bg-white ">
+        <div className="lg:flex lg:justify-between lg:items-center xl:w-[80%] lg:w-[90%] p-4 items-center lg:bg-transparent bg-white">
           <div>
-            <img src={Logo} alt="Logo" className="w-[132px] " />
+            <img src={Logo} alt="Logo" className="w-[132px]" />
           </div>
 
-          <div className="lg:flex items-center xl:w-[70%]  justify-between mt-4 lg:mt-0 w-[80%]">
-            <Link
-              to="#"
-              className="lg:inline block font-semibold text-[14px]  m-2"
-            >
-              K-12
-            </Link>
-            <Link
-              to="#"
-              className="lg:inline block font-semibold text-[14px]  m-2"
-            >
-              Higher ED
-            </Link>
-            <Link
-              to="#"
-              className="lg:inline block font-semibold text-[14px]  m-2"
-            >
-              Professional ED
-            </Link>
-            <Link
-              to="#"
-              className="lg:inline block font-semibold text-[14px]  m-2"
-            >
-              Resources
-            </Link>
-            <Link
-              to="#"
-              className="lg:inline block font-semibold text-[14px]   m-2"
-            >
-              News & Events
-            </Link>
-            <Link
-              to="#"
-              className="lg:inline block font-semibold text-[14px]  m-2"
-            >
-              About Us
-            </Link>
-            <Link
-              to="#"
-              className="lg:inline block font-medium  m-2 bg-[#091D4F] text-white p-2 w-[120px] rounded-full h-fit text-center"
-            >
-              Get a Studio
-            </Link>
+          <div className="lg:flex items-center xl:w-[70%] justify-between mt-4 lg:mt-0 w-[80%]">
+            {[
+              { name: "K-12", link: "#" },
+              { name: "Higher ED", link: "#" },
+              { name: "Professional ED", link: "#" },
+              { name: "Resources", link: "#" },
+              { name: "News & Events", link: "#" },
+              { name: "About Us", link: "#" },
+              { name: "Get a Studio", link: "#", button: true },
+            ].map((item) => (
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => showDropdown(item.name)}
+                onMouseLeave={hideDropdown}
+              >
+                <Link
+                  to={item.link}
+                  className={`lg:inline block font-semibold m-2 ${
+                    item.button
+                      ? "bg-[#96D4F7] text-white p-2 w-fit rounded-full"
+                      : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+                {dropdownVisible && activeLink === item.name && (
+                  <div className="absolute top-full left-0 w-[500px] shadow-md p-4 bg-white mt-7 rounded border">
+                    <div>
+                      <p className="flex gap-3 items-center	">
+                        <img src={icon} alt="" />
+                        <h1 className="font-semibold">Studio</h1>
+                      </p>
+                      <p className="mt-3 text-sm">
+                        Every academic dream is brought to life through unique
+                        and personalized learning experiences tailored to each
+                        student,
+                      </p>
+                    </div>
+                    <div>
+                      <Link
+                        to="#"
+                        className="block text-[#091D4F] mt-4 font-semibold"
+                      >
+                        Option 3
+                      </Link>
+
+                      <Link
+                        to="#"
+                        className="block text-[#091D4F] mt-2 font-semibold"
+                      >
+                        Option 3
+                      </Link>
+
+                      <Link
+                        to="#"
+                        className="block text-[#091D4F] mt-2 font-semibold"
+                      >
+                        Option 3
+                      </Link>
+
+                      <Link
+                        to="#"
+                        className="block text-[#091D4F] mt-2 font-semibold"
+                      >
+                        Option 3
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
