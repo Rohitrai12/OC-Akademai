@@ -14,8 +14,7 @@
 
 body {
   background-color: #dcedf3e3;
-  font-family: sans-serif;
-  font-family: a;
+  font-family: sans-serif !important;
 }
 
 

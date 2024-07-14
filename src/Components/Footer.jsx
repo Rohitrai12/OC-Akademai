@@ -15,7 +15,11 @@ const Footer = () => {
       <footer className="bg-white py-8 px-4 lg:px-20 pt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:ml-[114px]">
           <div className="flex flex-col items-center lg:items-start mt-[-55px]">
-            <img src={logo} alt="Logo" className="w-[130px] ml-[28px] mb-[31px]" />
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-[130px] ml-[28px] mb-[31px]"
+            />
             <div className="lg:ml-10  lg:mt-0 mt-10">
               <p className=" font-medium text-[#41707f]">GLOBAL HQ</p>
               <p className="w-full lg:w-[189px] text-[14px] font-[500]">
