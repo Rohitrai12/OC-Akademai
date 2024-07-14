@@ -20,7 +20,7 @@ const Footer = () => {
               alt="Logo"
               className="w-[130px] ml-[28px] mb-[31px]"
             />
-            <div className="lg:ml-10  lg:mt-0 mt-10">
+            <div className="lg:ml-10  lg:mt-0 mt-[5px]">
               <p className=" font-medium text-[#41707f]">GLOBAL HQ</p>
               <p className="w-full lg:w-[189px] text-[14px] font-[500]">
                 6330 South 3000 East Suite 700 Salt Lake City, UT 84121 USA

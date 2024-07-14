@@ -14,7 +14,7 @@ const Crafting = () => {
           animateOnce={true}
           duration={1.2}
         >
-          <img src={Img} alt="" className=" ml-[108px]" />
+          <img src={Img} alt="" className="" />
         </ScrollAnimation>
 
         <div

@@ -28,7 +28,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100]">
+    <div className=" m-auto mb-2 fixed w-[100%] top-0 z-[100]">
       {/* Navbar toggle button */}
       <button
         onClick={toggleNav}
@@ -55,12 +55,18 @@ function Header() {
           navToggle ? "block" : "hidden"
         } ${showWhiteBackground ? "bg-white" : ""}`}
       >
+
+      
         {/* Top section */}
-        <div
-          className="lg:flex lg:justify-between lg:items-center pl-[39px] bg-white  py-2 items-center lg:w-full"
-          style={{ boxShadow: "0 1px 2px rgba(0, 0, 0, 0.25)" }}
+        <div   className="w-[100%] bg-white"         style={{ boxShadow: "0 1px 2px rgba(0, 0, 0, 0.25)" }}
         >
-          <div>
+
+
+        <div
+          className="xl:w-[80%] lg:w-[80%]  w-full lg:flex lg:justify-between lg:items-center  bg-white  p-2 items-center m-auto"
+        >
+          
+          <div >
             <select
               name=""
               id=""
@@ -80,7 +86,7 @@ function Header() {
             </select>
           </div>
 
-          <div className="lg:flex items-center lg:w-[43%] justify-evenly mt-4 lg:mt-0">
+          <div className="lg:flex items-center lg:w-[60%] xl::w-[43%] justify-evenly mt-4 lg:mt-0">
             <div className="relative">
               <div
                 className={`p-2 rounded-full flex items-center justify-center ${
@@ -142,30 +148,30 @@ function Header() {
             </Link>
           </div>
         </div>
-
+        </div>
         {/* Bottom section */}
-        <div className="lg:flex lg:justify-between lg:items-center w-[100%] p-4 items-center lg:bg-transparent bg-white">
+        <div className="lg:flex lg:justify-between lg:items-center w-[100%] p-4 items-center lg:bg-transparent bg-white lg:w-[80%]">
           <div>
-            <img src={Logo} alt="Logo" className="w-[132px] ml-[53px]" />
+            <img src={Logo} alt="Logo" className="w-[132px] " />
           </div>
 
-          <div className="lg:flex items-center lg:w-[50%] justify-evenly mt-4 lg:mt-0">
-            <Link to="#" className="lg:inline block font-medium  m-2">
+          <div className="lg:flex items-center lg:w-[70%]  justify-between mt-4 lg:mt-0 w-[100%]">
+            <Link to="#" className="lg:inline block font-semibold text-[14px]  m-2">
               K-12
             </Link>
-            <Link to="#" className="lg:inline block font-medium  m-2">
+            <Link to="#" className="lg:inline block font-semibold text-[14px]  m-2">
               Higher ED
             </Link>
-            <Link to="#" className="lg:inline block font-medium  m-2">
+            <Link to="#" className="lg:inline block font-semibold text-[14px]  m-2">
               Professional ED
             </Link>
-            <Link to="#" className="lg:inline block font-medium  m-2">
+            <Link to="#" className="lg:inline block font-semibold text-[14px]  m-2">
               Resources
             </Link>
-            <Link to="#" className="lg:inline block font-medium  m-2">
+            <Link to="#" className="lg:inline block font-semibold text-[14px]   m-2">
               News & Events
             </Link>
-            <Link to="#" className="lg:inline block font-medium  m-2">
+            <Link to="#" className="lg:inline block font-semibold text-[14px]  m-2">
               About Us
             </Link>
             <Link
