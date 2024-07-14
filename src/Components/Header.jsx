@@ -78,6 +78,8 @@ function Header() {
                 <option value="">United Kingdom</option>
                 <option value="">Australia</option>
                 <option value="">Latin America</option>
+                <option value="">Pakistan</option>
+                <option value="">India</option>
               </select>
             </div>
 
@@ -136,7 +138,7 @@ function Header() {
                 Contact Us
               </Link>
               <Link
-                to="#"
+                to="/login"
                 className="lg:inline block font-semibold  m-2 bg-[#96D4F7] text-white p-2 w-[120px] rounded-full h-fit text-center"
               >
                 Log In
