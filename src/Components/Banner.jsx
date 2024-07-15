@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/Images/Akademai.png";
+import Logo from "../assets/Images/Red-AK.png";
 import "animate.css/animate.min.css";
 
 const Banner = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Images/logo.png";
+import Logo from "../assets/Images/Color-JO.png";
 import icon from "../assets/Images/browser.png";
 
 function Header() {
@@ -69,16 +69,13 @@ function Header() {
         } ${showWhiteBackground ? "bg-white" : ""}`}
       >
         {/* Top section */}
-        <div
-          className="w-[100%] bg-white boxShadow"
-        
-        >
+        <div className="w-[100%] bg-white boxShadow">
           <div className="xl:w-[80%] lg:w-[90%] w-full lg:flex lg:justify-between lg:items-center bg-white p-2 items-center m-auto">
             <div>
               <select
                 name=""
                 id=""
-                className="bg-[#96D4F7] text-white p-2 rounded-full"
+                className="bg-[#0c0f14e9] text-white p-1.5 px-1.5 rounded-full"
               >
                 <option value="">North America</option>
                 <option value="">Uganda</option>
@@ -153,7 +150,7 @@ function Header() {
               </Link>
               <Link
                 to="/login"
-                className="lg:inline block font-semibold m-2 bg-[#96D4F7] text-white p-2 w-[120px] rounded-full h-fit text-center"
+                className="lg:inline block font-semibold m-2 bg-[#0c0f14e9] text-white p-2 w-[120px] rounded-full h-fit text-center"
               >
                 Log In
               </Link>
@@ -164,7 +161,7 @@ function Header() {
         <div className="lg:flex lg:justify-between lg:items-center xl:w-[80%] lg:w-[90%] p-4 items-center lg:bg-transparent bg-white">
           <div>
             <Link to={"/"}>
-              <img src={Logo} alt="Logo" className="w-[132px]" />
+              <img src={Logo} alt="Logo" className="w-[160px]" />
             </Link>
           </div>
 
@@ -188,7 +185,7 @@ function Header() {
                   to={item.link}
                   className={`lg:inline block font-semibold m-2 ${
                     item.button
-                      ? "bg-[#96D4F7] text-white p-2 w-fit rounded-full"
+                      ? "bg-[#0c0f14e9] text-white p-2 w-fit rounded-full"
                       : ""
                   }`}
                 >

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Img1 from "../assets/Images/tab1.png";
 import Img2 from "../assets/Images/tab2.png";
 import Img3 from "../assets/Images/imgtab3.png";
-import Logo from "../assets/Images/Akademai.png";
+import Logo from "../assets/Images/Red-AK.png";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
 

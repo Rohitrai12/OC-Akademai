@@ -8,12 +8,11 @@ import Login from "./Page/LoginPage";
 function App() {
   return (
     <Router>
-     
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Signup" element={<SignUp />} />
         <Route path="/SignupAs" element={<SignupAsA />} />
-         <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
