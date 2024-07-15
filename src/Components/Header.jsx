@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Images/logo.png";
@@ -25,7 +24,7 @@ function Header() {
   };
 
   const hideDropdown = () => {
-    setDropdownVisible(false);
+    setDropdownVisible(true);
     setActiveLink(null);
   };
 
@@ -164,7 +163,9 @@ function Header() {
         {/* Bottom section */}
         <div className="lg:flex lg:justify-between lg:items-center xl:w-[80%] lg:w-[90%] p-4 items-center lg:bg-transparent bg-white">
           <div>
-            <img src={Logo} alt="Logo" className="w-[132px]" />
+            <Link to={"/"}>
+              <img src={Logo} alt="Logo" className="w-[132px]" />
+            </Link>
           </div>
 
           <div className="lg:flex items-center xl:w-[70%] justify-between mt-4 lg:mt-0 w-[80%]">
@@ -194,7 +195,7 @@ function Header() {
                   {item.name}
                 </Link>
                 {dropdownVisible && activeLink === item.name && (
-                  <div className="absolute top-full left-0 w-[500px] shadow-md p-4 bg-white mt-7 rounded border">
+                  <div className="absolute top-full left-0 lg:w-[500px] shadow-md p-4 bg-white mt-7 rounded border w-[90%]  z-10">
                     <div>
                       <p className="flex gap-3 items-center	">
                         <img src={icon} alt="" />
