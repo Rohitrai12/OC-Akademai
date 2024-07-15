@@ -19,11 +19,14 @@ function Header() {
   };
 
   const showDropdown = (link) => {
-    setActiveLink(link);
-    setDropdownVisible(true);
+    if (link !== "Get a Studio") { // Only show dropdown for specific links
+      setActiveLink(link);
+      setDropdownVisible(true);
+    }
   };
+
   const hideDropdown = () => {
-    setDropdownVisible(false); // Corrected typo from fale to false
+    setDropdownVisible(false);
     setActiveLink(null);
   };
 
