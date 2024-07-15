@@ -31,7 +31,7 @@ function Login() {
           Don’t have account ?{" "}
           <Link to="/Signup" className="text-[#EEB053] font-medium">
             {" "}
-            Login
+            Signup
           </Link>
         </span>
       </form>

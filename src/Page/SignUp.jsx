@@ -30,14 +30,12 @@ function SignUp() {
           className="bg-white p-2 lg:w-[80%] w-[90%] m-auto border border-none rounded-md mt-[8px]"
         />
 
-        <button
-          className="p-2 lg:w-[80%] w-[90%] m-auto border border-none text-[18px] font-semibold rounded-md bg-white mt-7"
-        >
+        <button className="p-2 lg:w-[80%] w-[90%] m-auto border border-none text-[18px] font-semibold rounded-md bg-white mt-7">
           Signup
         </button>
         <span className="text-white text[16px] text-center block mt-4">
           Already have account ?{" "}
-          <Link to="login" className="text-[#EEB053] font-medium">
+          <Link to="/login" className="text-[#EEB053] font-medium">
             {" "}
             Login
           </Link>
