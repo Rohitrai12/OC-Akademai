@@ -12,8 +12,12 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.2.7",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "animate.css": "^4.1.1",
     "axios": "^1.7.2",
+    "firebase": "^10.12.3",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-animate-on-scroll": "^2.1.9",
@@ -21,7 +25,8 @@
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.1",
     "react-scroll-animation": "^1.0.3",
-    "react-scroll-trigger": "^0.6.14"
+    "react-scroll-trigger": "^0.6.14",
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
