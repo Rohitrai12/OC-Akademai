@@ -22,9 +22,8 @@ function Header() {
     setActiveLink(link);
     setDropdownVisible(true);
   };
-
   const hideDropdown = () => {
-    setDropdownVisible(fale);
+    setDropdownVisible(false); // Corrected typo from fale to false
     setActiveLink(null);
   };
 
@@ -161,7 +160,7 @@ function Header() {
         <div className="lg:flex lg:justify-between lg:items-center xl:w-[80%] lg:w-[90%] p-4 items-center lg:bg-transparent bg-white">
           <div>
             <Link to={"/"}>
-              <img src={Logo} alt="Logo" className="w-[160px]" />
+              <img src={Logo} alt="Logo" className="w-[204px]" />
             </Link>
           </div>
 
