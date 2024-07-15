@@ -24,7 +24,7 @@ function Header() {
   };
 
   const hideDropdown = () => {
-    setDropdownVisible(true);
+    setDropdownVisible(fale);
     setActiveLink(null);
   };
 
