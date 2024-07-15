@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Images/logo.png";
@@ -81,6 +82,7 @@ function Header() {
                 className="bg-[#96D4F7] text-white p-2 rounded-full"
               >
                 <option value="">North America</option>
+                <option value="">Uganda</option>
                 <option value="">Europe</option>
                 <option value="">South Africa</option>
                 <option value="">Nigeria</option>
