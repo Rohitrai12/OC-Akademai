@@ -8,10 +8,12 @@ import OurAward from "../Components/OurAward";
 import Crafting from "../Components/Crafting";
 import Ready from "../Components/Ready";
 import Footer from "../Components/Footer";
+import Header from "../Components/Header";
 
 const HomePage = () => {
   return (
     <div>
+       <Header className="lg:block hidden" />
       <Banner />
       <RegisterOpen />
       <Meet />

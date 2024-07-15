@@ -41,7 +41,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100] lg:p-0 p-5">
+    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100] lg:p-0 p-5 bg-white">
       {/* Navbar toggle button */}
       <button
         onClick={toggleNav}
@@ -70,8 +70,8 @@ function Header() {
       >
         {/* Top section */}
         <div
-          className="w-[100%] bg-white"
-          style={{ boxShadow: "0 1px 2px rgba(0, 0, 0, 0.25)" }}
+          className="w-[100%] bg-white boxShadow"
+        
         >
           <div className="xl:w-[80%] lg:w-[90%] w-full lg:flex lg:justify-between lg:items-center bg-white p-2 items-center m-auto">
             <div>
