@@ -74,7 +74,7 @@ function Header() {
               <select
                 name=""
                 id=""
-                className="bg-[#0c0f14e9] text-white p-1.5 px-1.5 rounded-full"
+                className="bg-[#091d4f] text-white p-1.5 px-1.5 rounded-full"
               >
                 <option value="">North America</option>
                 <option value="">Uganda</option>
@@ -149,7 +149,7 @@ function Header() {
               </Link>
               <Link
                 to="/login"
-                className="lg:inline block font-semibold m-2 bg-[#0c0f14e9] text-white p-2 w-[120px] rounded-full h-fit text-center"
+                className="lg:inline block font-semibold m-2 bg-[#091d4f] text-white p-2 w-[120px] rounded-full h-fit text-center"
               >
                 Log In
               </Link>
@@ -184,7 +184,7 @@ function Header() {
                   to={item.link}
                   className={`lg:inline block font-semibold m-2 ${
                     item.button
-                      ? "bg-[#0c0f14e9] text-white p-2 w-fit rounded-full"
+                      ? "bg-[#091d4f] text-white p-2 w-fit rounded-full"
                       : ""
                   }`}
                 >
