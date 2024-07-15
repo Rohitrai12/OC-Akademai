@@ -41,11 +41,11 @@ function Header() {
   }, []);
 
   return (
-    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100]">
+    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100] lg:p-0 p-5">
       {/* Navbar toggle button */}
       <button
         onClick={toggleNav}
-        className="m-5 lg:hidden flex justify-center w-8 h-8 bg-transparent text-[#091D4F] float-right relative rounded-full"
+        className=" lg:hidden flex justify-center w-8 h-8 bg-transparent text-[#091D4F] float-right relative rounded-full"
         style={{ zIndex: "1" }}
       >
         <svg
