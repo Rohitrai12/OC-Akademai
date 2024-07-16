@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { Component, useState } from "react";
+import React from "react";
 
 function SignUp() {
   return (
