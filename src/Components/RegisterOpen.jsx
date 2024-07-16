@@ -6,33 +6,34 @@ import "animate.css/animate.min.css";
 const RegisterOpen = () => {
   return (
     <div className="container lg:flex justify-evenly items-center mt-5 lg:mt-10 m-auto">
-      <ScrollAnimation 
-        animateIn="animate__fadeInLeft" 
-        animateOnce={true} 
+      <ScrollAnimation
+        animateIn="animate__fadeInLeft"
+        animateOnce={true}
         duration={1.5} // Adjust duration for smoother transition
         delay={100} // Add delay to make it smoother
       >
         <img src={Img1} alt="" className="m-auto lg:m-0" />
       </ScrollAnimation>
-      
+
       <div className="lg:w-[35%] w-[95%] m-auto mt-5 lg:m-0 lg:text-left text-center">
-        <ScrollAnimation 
-          animateIn="animate__fadeInRight" 
-          animateOnce={true} 
+        <ScrollAnimation
+          animateIn="animate__fadeInRight"
+          animateOnce={true}
           duration={1.5} // Adjust duration for smoother transition
           delay={200} // Add delay to make it smoother
         >
           <h4 className="text-[#143D50] text-[12px] ">
-          August 9TH - 15TH, 2024 | Kenya Nairobi and Uganda Kampala,
-                    </h4>
+            August 9TH - 15TH, 2024 | Kenya Nairobi and Uganda Kampala,
+          </h4>
           <h2 className="lg:text-[40px] py-2 lg:py-0 text-[24px] md:text-[35px] text-[#091D4F] font-semibold">
-          MindSphere '24 <br />
-          Registration is Open
+            MindSphere '24 <br />
+            Registration is Open
           </h2>
           <p className="text-[16px] text-[#143D50]">
-          Our annual user tour provides you with the opportunity to
-            explore new topics and research areas that share insights and ideas, connect with the
-            community, and redefine what's possible in teaching and learning as well as identifying world opportunities.
+            Our annual user tour provides you with the opportunity to explore
+            new topics and research areas that share insights and ideas, connect
+            with the community, and redefine what's possible in teaching and
+            learning as well as identifying world opportunities.
           </p>
 
           <button

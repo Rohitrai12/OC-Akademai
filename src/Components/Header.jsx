@@ -19,7 +19,8 @@ function Header() {
   };
 
   const showDropdown = (link) => {
-    if (link !== "Get a Studio") { // Only show dropdown for specific links
+    if (link !== "Get a Studio") {
+      // Only show dropdown for specific links
       setActiveLink(link);
       setDropdownVisible(true);
     }
