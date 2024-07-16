@@ -30,7 +30,7 @@ function MeetTabs() {
             }
             onClick={() => handleTabClick(1)}
           >
-Oc Akademia
+Oc-Akademia
           </div>
         </ScrollAnimation>
         <ScrollAnimation
