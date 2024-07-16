@@ -23,16 +23,16 @@ const RegisterOpen = () => {
           delay={200} // Add delay to make it smoother
         >
           <h4 className="text-[#143D50] text-[12px] ">
-            JULY 9TH - 11TH, 2024 | VENETIAN RESORT, LAS VEGAS
-          </h4>
+          August 9TH - 15TH, 2024 | Kenya Nairobi and Uganda Kampala,
+                    </h4>
           <h2 className="lg:text-[40px] py-2 lg:py-0 text-[24px] md:text-[35px] text-[#091D4F] font-semibold">
-            InstructureCon '24 <br />
-            Registration is Open
+          MindSphere '24 <br />
+          Registration is Open
           </h2>
           <p className="text-[16px] text-[#143D50]">
-            Our annual user conference provides you with the opportunity to
-            explore new topics, share insights and ideas, connect with the
-            community, and redefine what's possible in teaching and learning.
+          Our annual user tour provides you with the opportunity to
+            explore new topics and research areas that share insights and ideas, connect with the
+            community, and redefine what's possible in teaching and learning as well as identifying world opportunities.
           </p>
 
           <button
