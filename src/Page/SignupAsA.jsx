@@ -44,7 +44,7 @@ const SignupAsA = () => {
         <h2 className="text-[46px] text-center text-[#091D4F] mt-[15%] font-semibold">
           Sign Up As A
         </h2>
-        <button onClick={handleLogout}>Logout</button>
+        <button onClick={handleLogout} className='lg:inline block font-semibold m-2 bg-[#091d4f] text-white p-2 w-[120px]  h-fit text-center'>Logout</button>
             <div>
                 {
                     products && products?.map((item, index) => (
