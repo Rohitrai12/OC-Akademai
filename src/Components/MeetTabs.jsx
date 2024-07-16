@@ -30,7 +30,7 @@ function MeetTabs() {
             }
             onClick={() => handleTabClick(1)}
           >
-Oc-Akademia
+            Oc-Akademia
           </div>
         </ScrollAnimation>
         <ScrollAnimation
@@ -64,7 +64,7 @@ Oc-Akademia
             }
             onClick={() => handleTabClick(3)}
           >
-            Mind Sphere
+            MindSphere
           </div>
         </ScrollAnimation>
       </div>
