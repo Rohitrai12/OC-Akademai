@@ -77,7 +77,7 @@ function Header() {
               <select
                 name=""
                 id=""
-                className="bg-[#b7bcca] text-white p-1.5 px-1.5 rounded-full"
+                className="bg-[#091d4f] text-white p-1.5 px-1.5 rounded-full"
               >
                 <option value="">North America</option>
                 <option value="">Uganda</option>
