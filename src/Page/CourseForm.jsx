@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseForm = () => {
   return (
@@ -18,9 +19,9 @@ const CourseForm = () => {
               </a>
             </li>
             <li className="mb-2">
-              <a href="#" className="p-2 block">
+              <Link to="/addassignments" className="p-2 block">
                 Assignments
-              </a>
+              </Link>
             </li>
             <li className="mb-2">
               <a href="#" className="p-2 block">
