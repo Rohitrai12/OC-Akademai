@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Img1 from "../assets/Images/announcement.png";
 import Img2 from "../assets/Images/discuss.png";
 import Modal from "./Modal"; // Import your modal component
@@ -9,6 +9,15 @@ const Dashboard = ({ toggleSidebar }) => {
   const [courses, setCourses] = useState([]);
   const [courseName, setCourseName] = useState("");
   const [courseDescription, setCourseDescription] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Load courses from localStorage on component mount
+    const savedCourses = localStorage.getItem("courses");
+    if (savedCourses) {
+      setCourses(JSON.parse(savedCourses));
+    }
+  }, []);
 
   const openModal = () => {
     setShowModal(true);
@@ -29,9 +38,22 @@ const Dashboard = ({ toggleSidebar }) => {
       description: courseDescription,
     };
     // Update courses state with the new course
-    setCourses([...courses, newCourse]);
+    const updatedCourses = [...courses, newCourse];
+    setCourses(updatedCourses);
+    // Save updated courses to localStorage
+    localStorage.setItem("courses", JSON.stringify(updatedCourses));
     // Close the modal after creating the course
     closeModal();
+  };
+
+  const editCourse = () => {
+    navigate("/course-form");
+  };
+
+  const deleteCourse = (index) => {
+    const updatedCourses = courses.filter((_, i) => i !== index);
+    setCourses(updatedCourses);
+    localStorage.setItem("courses", JSON.stringify(updatedCourses));
   };
 
   return (
@@ -39,7 +61,7 @@ const Dashboard = ({ toggleSidebar }) => {
       {/* Toggle button for sidebar */}
       <button
         onClick={toggleSidebar}
-        className="lg:hidden bg-blue-500 text-white   rounded-lg mb-4"
+        className="lg:hidden bg-blue-500 text-white rounded-lg mb-4"
       >
         Toggle Sidebar
       </button>
@@ -52,7 +74,10 @@ const Dashboard = ({ toggleSidebar }) => {
           >
             Start a New Course
           </button>
-          <Link to='/viewall-courses' className="bg-gray-500 text-white text-[16px] h-fit p-[15px] rounded-lg">
+          <Link
+            to="/viewall-courses"
+            className="bg-gray-500 text-white text-[16px] h-fit p-[15px] rounded-lg"
+          >
             View All Courses
           </Link>
         </div>
@@ -66,12 +91,9 @@ const Dashboard = ({ toggleSidebar }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {courses.map((course, index) => (
             <div key={index}>
-              <Link
-                to={"/course-form"}
-                className="bg-[#EE4C53] block py-5 rounded-lg h-[340px] relative"
-              >
+              <div className="bg-[#EE4C53] block py-5 rounded-lg h-[340px] relative">
                 <div className="float-right relative right-3">
-                  <button>
+                  <button onClick={editCourse}>
                     <svg
                       width="24"
                       height="24"
@@ -85,7 +107,7 @@ const Dashboard = ({ toggleSidebar }) => {
                       />
                     </svg>
                   </button>
-                  <button className="ml-2">
+                  <button onClick={() => deleteCourse(index)} className="ml-2">
                     <svg
                       width="24"
                       height="24"
@@ -111,7 +133,7 @@ const Dashboard = ({ toggleSidebar }) => {
                     <img src={Img2} alt="" className="ml-2" />
                   </div>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </div>

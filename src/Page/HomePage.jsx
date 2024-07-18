@@ -13,7 +13,7 @@ import Header from "../Components/Header";
 const HomePage = () => {
   return (
     <div>
-       <Header className="lg:block hidden" />
+      <Header className="lg:block hidden" />
       <Banner />
       <RegisterOpen />
       <Meet />
