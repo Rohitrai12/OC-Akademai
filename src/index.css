@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.cdnfonts.com/css/applied-sans-pro');
+/* @import url('https://fonts.cdnfonts.com/css/applied-sans-pro'); */
 
 .Banner {
   background-image: url(./assets/Images/BannerIm.png);
