@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { CiImport } from "react-icons/ci";
 
 const CourseForm = () => {
   const [activeTab, setActiveTab] = useState("Home");
@@ -9,6 +7,9 @@ const CourseForm = () => {
   });
   const [showPopup, setShowPopup] = useState(false);
   const [moduleName, setModuleName] = useState("");
+  const [moduleVideos, setModuleVideos] = useState([null]);
+  const [modules, setModules] = useState([]);
+  const [editIndex, setEditIndex] = useState(null);
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -32,12 +33,51 @@ const CourseForm = () => {
     setModuleName(event.target.value);
   };
 
+  const handleModuleVideoChange = (index, event) => {
+    const newVideos = [...moduleVideos];
+    newVideos[index] = URL.createObjectURL(event.target.files[0]);
+    setModuleVideos(newVideos);
+  };
+
+  const addModuleVideoField = () => {
+    setModuleVideos([...moduleVideos, null]);
+  };
+
+  const removeModuleVideoField = (index) => {
+    const newVideos = moduleVideos.filter((_, i) => i !== index);
+    setModuleVideos(newVideos);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Module Name submitted:", moduleName);
+    const newModule = { name: moduleName, videos: moduleVideos };
+    if (editIndex !== null) {
+      const updatedModules = modules.map((module, index) =>
+        index === editIndex ? newModule : module
+      );
+      setModules(updatedModules);
+      setEditIndex(null);
+    } else {
+      setModules([...modules, newModule]);
+    }
+    setModuleName("");
+    setModuleVideos([null]);
     togglePopup();
-    // Additional logic can be added here for module creation
   };
+
+  const handleEditModule = (index) => {
+    setEditIndex(index);
+    const module = modules[index];
+    setModuleName(module.name);
+    setModuleVideos(module.videos);
+    togglePopup();
+  };
+
+  const handleDeleteModule = (index) => {
+    const updatedModules = modules.filter((_, i) => i !== index);
+    setModules(updatedModules);
+  };
+
   return (
     <div className="flex min-h-screen bg-gray-100">
       <aside className="w-[12rem] border-r border-[#00000045] text-black flex-shrink-0 ml-[99px]">
@@ -55,10 +95,9 @@ const CourseForm = () => {
                 Home
               </a>
             </li>
-
             <li className="mb-2">
               <a
-                to="#"
+                href="#"
                 className={`p-2 block ${
                   activeTab === "Assignments" ? "font-bold" : ""
                 }`}
@@ -67,7 +106,6 @@ const CourseForm = () => {
                 Assignments
               </a>
             </li>
-
             <li className="mb-2">
               <a
                 href="#"
@@ -79,8 +117,6 @@ const CourseForm = () => {
                 Announcements
               </a>
             </li>
-
-            {/* Add other sidebar items here */}
             <li className="mb-2">
               <a
                 href="#"
@@ -92,7 +128,6 @@ const CourseForm = () => {
                 Discussions
               </a>
             </li>
-
             <li className="mb-2">
               <a
                 href="#"
@@ -104,7 +139,6 @@ const CourseForm = () => {
                 Grades
               </a>
             </li>
-
             <li className="mb-2">
               <a
                 href="#"
@@ -116,7 +150,6 @@ const CourseForm = () => {
                 Quizzes
               </a>
             </li>
-
             <li className="mb-2">
               <a
                 href="#"
@@ -128,12 +161,10 @@ const CourseForm = () => {
                 Modules
               </a>
             </li>
-            {/* Add other sidebar items here */}
           </ul>
         </div>
       </aside>
       <div className="flex-1 p-6 flex justify-center items-center">
-        {/* Content area */}
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-5xl">
           <h1 className="text-black text-2xl mb-6">{activeTab} Details</h1>
           {activeTab === "Home" && (
@@ -229,56 +260,20 @@ const CourseForm = () => {
                     <input
                       type="text"
                       className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-                      placeholder="Enter logo placement URL"
                     />
                   </div>
-                  <div className="mb-4">
-                    <label className="block text-gray-700 mb-2">
-                      File Category
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-                      placeholder="Enter file category"
-                    />
+                  <div className="flex justify-end">
+                    <button
+                      type="submit"
+                      className="px-6 py-2 bg-[#162958] text-white rounded-lg hover:bg-blue-600"
+                    >
+                      Save
+                    </button>
                   </div>
-                  <div className="mb-4">
-                    <label className="block text-gray-700 mb-2">
-                      Visibility
-                    </label>
-                    <select className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                      <option>Private</option>
-                      <option>Public</option>
-                    </select>
-                  </div>
-                  <div className="mb-4">
-                    <label className="block text-gray-700 mb-2">
-                      Description
-                    </label>
-                    <textarea
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-                      placeholder="Enter course description"
-                    ></textarea>
-                  </div>
-                  <div className="mb-4">
-                    <label className="inline-flex items-center">
-                      <input type="checkbox" className="form-checkbox" />
-                      <span className="ml-2">
-                        Allow users to see and download files
-                      </span>
-                    </label>
-                  </div>
-                  <button
-                    type="submit"
-                    className="bg-[#091D4F] text-white px-4 py-2 rounded-lg"
-                  >
-                    Update Course Details
-                  </button>
                 </form>
               </div>
             </div>
           )}
-          {/* Add other content for different tabs here */}
           {activeTab === "Assignments" && (
             <form>
               <div className="mb-4">
@@ -396,68 +391,120 @@ const CourseForm = () => {
             </>
           )}
           {activeTab === "Modules" && (
-            <>
-              <nav className="flex justify-end border-b mt-[-1rem]">
-                <button
-                  className="mt-4 mb-2 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#091D4F] hover:bg-[#091d4f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900"
-                  onClick={togglePopup}
-                >
-                  Add Module
-                </button>
-              </nav>
-              <div
-                className="hover:bg-[#e5e7eb] w-max mx-auto mt-4 rounded-md cursor-pointer"
+            <div>
+              <h2 className="text-xl font-semibold mb-4">Modules</h2>
+              <button
                 onClick={togglePopup}
+                className="px-4 py-2 bg-[#162958] text-white rounded-lg mb-4"
               >
-                <CiImport className="fill-[#393a524d] text-[220px] mx-auto" />
-                <p className="text-center">Create a New Module</p>
-              </div>
-            </>
-          )}
-
-          {/* Popup Content */}
-          {showPopup && (
-            <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
-              <div className="bg-white p-8 rounded-lg shadow-lg max-w-md">
-                <h2 className="text-2xl font-semibold mb-4 text-center">
-                  Create New Module
-                </h2>
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="moduleName"
-                      className="block text-sm font-medium text-gray-700"
+                Add Module
+              </button>
+              <div>
+                {modules.map((module, index) => (
+                  <div>
+                    <div
+                      key={index}
+                      className="border rounded-lg p-4 mb-2 flex justify-between items-center flex-row-reverse"
                     >
-                      Module Name
-                    </label>
-                    <input
-                      type="text"
-                      id="moduleName"
-                      name="moduleName"
-                      value={moduleName}
-                      onChange={handleModuleNameChange}
-                      className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:blue-500 focus:border-blue-500 border p-3 sm:text-sm"
-                      placeholder="Enter your Module Name..."
-                      required
-                    />
+                      <div>
+                        <h3 className="text-lg font-semibold">{module.name}</h3>
+                        <ul>
+                          <div className="flex justify-end">
+                            <button
+                              onClick={() => handleEditModule(index)}
+                              className="px-2 py-1 bg-green-500 text-white rounded-lg mr-2 w-[86px] font-semibold"
+                            >
+                              Edit
+                            </button>
+                            <button
+                              onClick={() => handleDeleteModule(index)}
+                              className="px-2 py-1 bg-red-500 text-white rounded-lg  w-[86px] font-semibold"
+                            >
+                              Delete
+                            </button>
+                          </div>
+                          {module.videos.map((video, videoIndex) => (
+                            <li key={videoIndex}>
+                              <video
+                                className="w-full"
+                                src={video}
+                                controls
+                                style={{ width: "32%", height: "auto" }}
+                              />
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex justify-center">
-                    <button
-                      type="submit"
-                      className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#091D4F] hover:bg-[#091d4f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900"
-                    >
-                      Create Module
-                    </button>
-                    <button
-                      type="button"
-                      onClick={togglePopup}
-                      className="ml-4 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </form>
+                ))}
               </div>
+              {showPopup && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                  <div className="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 className="text-xl font-semibold mb-4">Add Module</h2>
+                    <form onSubmit={handleSubmit}>
+                      <div className="mb-4">
+                        <label className="block text-gray-700 mb-2">
+                          Module Name
+                        </label>
+                        <input
+                          type="text"
+                          value={moduleName}
+                          onChange={handleModuleNameChange}
+                          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+                        />
+                      </div>
+                      {moduleVideos.map((video, index) => (
+                        <div key={index} className="mb-4">
+                          <label className="block text-gray-700 mb-2">
+                            Video {index + 1}
+                          </label>
+                          <input
+                            type="file"
+                            accept="video/*"
+                            onChange={(event) =>
+                              handleModuleVideoChange(index, event)
+                            }
+                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+                          />
+                          {index > 0 && (
+                            <button
+                              type="button"
+                              onClick={() => removeModuleVideoField(index)}
+                              className="px-2 py-1 bg-red-500 text-white rounded-lg mt-2"
+                            >
+                              Remove Video
+                            </button>
+                          )}
+                        </div>
+                      ))}
+                      <button
+                        type="button"
+                        onClick={addModuleVideoField}
+                        className="px-4 py-2 bg-green-500 text-white rounded-lg mb-4"
+                      >
+                        Add Another Video
+                      </button>
+                      <div className="flex justify-end">
+                        <button
+                          type="submit"
+                          className="px-6 py-2 bg-[#162958] text-white rounded-lg "
+                        >
+                          {editIndex !== null ? "Update" : "Add"} Module
+                        </button>
+                        <button
+                          type="button"
+                          onClick={togglePopup}
+                          className="px-6 py-2 ml-4 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
