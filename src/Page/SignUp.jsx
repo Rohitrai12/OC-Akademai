@@ -53,7 +53,7 @@ function SignUp() {
       handleError(err);
     }
   };
-  console.log(signupInfo)
+  console.log(signupInfo);
   return (
     <div className="container bg-[#091D4F] md:px-10 px-5 py-20 rounded-xl text-center w-[95%] md:w-[70%] lg:w-[40%] xl:w-[35%] m-auto mt-[8%]">
       <h2 className="text-[34px] text-center font-semibold text-white">

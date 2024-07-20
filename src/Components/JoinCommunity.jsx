@@ -35,7 +35,8 @@ const JoinCommunity = () => {
             delay={0.3}
           >
             <p className="lg:text-[16px] text-[14px] text-white ">
-            Meet our user community: over twenty thousand of the most insightful, engaged, and learning-loving individuals out there.
+              Meet our user community: over twenty thousand of the most
+              insightful, engaged, and learning-loving individuals out there.
             </p>
           </ScrollAnimation>
 
@@ -51,7 +52,7 @@ const JoinCommunity = () => {
                 boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)",
               }}
             >
-              Visit the community {" "}
+              Visit the community{" "}
               <svg
                 width="15"
                 height="21"
