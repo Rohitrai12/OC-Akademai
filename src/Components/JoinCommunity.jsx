@@ -15,7 +15,7 @@ const JoinCommunity = () => {
             <h3 className="text-[14px] font-semibold text-white">
               OVER 20000 STRONG
             </h3>
-          </ScrollAnimation>        
+          </ScrollAnimation>
 
           <ScrollAnimation
             animateIn="animate__backInLeft"
