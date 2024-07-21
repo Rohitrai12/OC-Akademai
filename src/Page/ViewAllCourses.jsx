@@ -7,7 +7,8 @@ const ViewAllCourses = () => {
       <h1 className="text-black text-3xl font-semibold mb-6">
         Courses I'm Teaching (3)
       </h1>
-      <div className="space-y-6">``
+      <div className="space-y-6">
+        ``
         {[1, 2, 3].map((_, index) => (
           <div
             key={index}

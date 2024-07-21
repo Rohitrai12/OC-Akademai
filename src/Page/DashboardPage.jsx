@@ -3,12 +3,16 @@ import { Link, useNavigate } from "react-router-dom";
 import Img1 from "../assets/Images/announcement.png";
 import Img2 from "../assets/Images/discuss.png";
 import Modal from "./Modal"; // Import your modal component
+import { HiDotsVertical } from "react-icons/hi";
 
 const Dashboard = ({ toggleSidebar }) => {
   const [showModal, setShowModal] = useState(false);
   const [courses, setCourses] = useState([]);
   const [courseName, setCourseName] = useState("");
   const [courseDescription, setCourseDescription] = useState("");
+  const [colorPickerVisible, setColorPickerVisible] = useState(false);
+  const [selectedCourseIndex, setSelectedCourseIndex] = useState(null);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,6 +40,7 @@ const Dashboard = ({ toggleSidebar }) => {
     const newCourse = {
       name: courseName,
       description: courseDescription,
+      color: "#EE4C53", // Default color
     };
     // Update courses state with the new course
     const updatedCourses = [...courses, newCourse];
@@ -54,6 +59,18 @@ const Dashboard = ({ toggleSidebar }) => {
     const updatedCourses = courses.filter((_, i) => i !== index);
     setCourses(updatedCourses);
     localStorage.setItem("courses", JSON.stringify(updatedCourses));
+  };
+
+  const handleColorChange = (color) => {
+    const updatedCourses = courses.map((course, index) => {
+      if (index === selectedCourseIndex) {
+        return { ...course, color };
+      }
+      return course;
+    });
+    setCourses(updatedCourses);
+    localStorage.setItem("courses", JSON.stringify(updatedCourses));
+    setDropdownVisible(false);
   };
 
   return (
@@ -91,8 +108,11 @@ const Dashboard = ({ toggleSidebar }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {courses.map((course, index) => (
             <div key={index}>
-              <div className="bg-[#EE4C53] block py-5 rounded-lg h-[340px] relative">
-                <div className="float-right relative right-3">
+              <div
+                className="block py-5 rounded-lg h-[340px] relative"
+                style={{ backgroundColor: course.color }}
+              >
+                <div className="float-left relative left-1 flex flex-row-reverse gap-3">
                   <button onClick={editCourse}>
                     <svg
                       width="24"
@@ -121,6 +141,52 @@ const Dashboard = ({ toggleSidebar }) => {
                       />
                     </svg>
                   </button>
+                  <button
+                    onClick={() => {
+                      setSelectedCourseIndex(index);
+                      setDropdownVisible(!dropdownVisible);
+                    }}
+                    aria-label="Change course color"
+                  >
+                    <HiDotsVertical fill="white" className="text-[20px]" />
+                  </button>
+                  {/* Color Picker Dropdown */}
+                  {dropdownVisible && selectedCourseIndex === index && (
+                    <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg p-2 z-10">
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          className="w-8 h-8 rounded-full bg-red-500"
+                          onClick={() => handleColorChange("#EE4C53")}
+                          aria-label="Red"
+                        />
+                        <button
+                          className="w-8 h-8 rounded-full bg-blue-500"
+                          onClick={() => handleColorChange("#3498db")}
+                          aria-label="Blue"
+                        />
+                        <button
+                          className="w-8 h-8 rounded-full bg-green-500"
+                          onClick={() => handleColorChange("#2ecc71")}
+                          aria-label="Green"
+                        />
+                        <button
+                          className="w-8 h-8 rounded-full bg-yellow-500"
+                          onClick={() => handleColorChange("#f1c40f")}
+                          aria-label="Yellow"
+                        />
+                        <button
+                          className="w-8 h-8 rounded-full bg-gray-500"
+                          onClick={() => handleColorChange("#7f8c8d")}
+                          aria-label="Gray"
+                        />
+                        <button
+                          className="w-8 h-8 rounded-full bg-purple-500"
+                          onClick={() => handleColorChange("#9b59b6")}
+                          aria-label="Purple"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="bg-[#091D4F] p-4 absolute w-full bottom-0 rounded-b-lg">
@@ -129,8 +195,8 @@ const Dashboard = ({ toggleSidebar }) => {
                     {course.description}
                   </h3>
                   <div className="float-right flex justify-end">
-                    <img src={Img1} alt="" />
-                    <img src={Img2} alt="" className="ml-2" />
+                    <img src={Img1} alt="Announcement icon" />
+                    <img src={Img2} alt="Discuss icon" className="ml-2" />
                   </div>
                 </div>
               </div>

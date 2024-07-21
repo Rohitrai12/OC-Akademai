@@ -24,7 +24,8 @@ const WhoeWeHelp = () => {
         rect.left >= 0 &&
         rect.bottom <=
           (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
       );
     };
 
@@ -49,7 +50,9 @@ const WhoeWeHelp = () => {
       <div className="lg:flex justify-evenly">
         <div className="text-center lg:w-[25%] w-[80%] m-auto lg:m-0 animate-on-scroll">
           <img src={Help1} alt="" className="m-auto w-[55%]" />
-          <h3 className="text-[#091D4F] text-[20px] lg:text-[30px] font-semibold">K-12</h3>
+          <h3 className="text-[#091D4F] text-[20px] lg:text-[30px] font-semibold">
+            K-12
+          </h3>
           <p className="lg:text-[16px] text-[14px] text-[#143D50]">
             A lot changes between that K and that 12. Our platform supports
             every student, at every stage, in any environment.
@@ -70,12 +73,12 @@ const WhoeWeHelp = () => {
         </div>
         <div className="text-center lg:w-[25%] w-[80%] m-auto lg:m-0 animate-on-scroll">
           <img src={Help2} alt="" className="m-auto w-[55%]" />
-          <h3 className="text-[#091D4F] text-[20px] lg:text-[30px] font-semibold">Higher Ed</h3>
+          <h3 className="text-[#091D4F] text-[20px] lg:text-[30px] font-semibold">
+            Higher Ed
+          </h3>
           <p className="lg:text-[16px] text-[14px] text-[#143D50]">
-            Our solutions make educators
-            more effective and students
-            more successful, both in school
-            and beyond.
+            Our solutions make educators more effective and students more
+            successful, both in school and beyond.
           </p>
           <Link to="#" className="text-[#091D4F] tex-[16px]">
             Learn More{" "}
@@ -93,12 +96,12 @@ const WhoeWeHelp = () => {
         </div>
         <div className="text-center lg:w-[25%] w-[80%] m-auto lg:m-0 animate-on-scroll">
           <img src={Help3} alt="" className="m-auto w-[55%]" />
-          <h3 className="text-[#091D4F]text-[20px] lg:text-[30px] font-semibold">Professional Ed</h3>
+          <h3 className="text-[#091D4F]text-[20px] lg:text-[30px] font-semibold">
+            Professional Ed
+          </h3>
           <p className="lg:text-[16px] text-[14px] text-[#143D50]">
-            To work is to learn. But when
-            work takes extra learning, our
-            tools make it extra intuitive,
-            engaging, and effective.
+            To work is to learn. But when work takes extra learning, our tools
+            make it extra intuitive, engaging, and effective.
           </p>
           <Link to="#" className="text-[#091D4F] tex-[16px]">
             Learn More{" "}
