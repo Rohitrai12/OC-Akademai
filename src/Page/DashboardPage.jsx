@@ -13,7 +13,9 @@ const Dashboard = ({ toggleSidebar }) => {
   const [colorPickerVisible, setColorPickerVisible] = useState(false);
   const [selectedCourseIndex, setSelectedCourseIndex] = useState(null);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [customColor, setCustomColor] = useState("#EE4C53"); // Default custom color
   const navigate = useNavigate();
+
 
   useEffect(() => {
     // Load courses from localStorage on component mount
@@ -71,6 +73,14 @@ const Dashboard = ({ toggleSidebar }) => {
     setCourses(updatedCourses);
     localStorage.setItem("courses", JSON.stringify(updatedCourses));
     setDropdownVisible(false);
+  };
+
+  const handleCustomColorChange = (e) => {
+    setCustomColor(e.target.value);
+  };
+
+  const applyCustomColor = () => {
+    handleColorChange(customColor);
   };
 
   return (
@@ -184,6 +194,21 @@ const Dashboard = ({ toggleSidebar }) => {
                           onClick={() => handleColorChange("#9b59b6")}
                           aria-label="Purple"
                         />
+                        {/* Custom Color Input */}
+                        <div className="flex items-center mt-2">
+                          <input
+                            type="color"
+                            value={customColor}
+                            onChange={handleCustomColorChange}
+                            className="w-8 h-8 border rounded mr-2"
+                          />
+                          <button
+                            onClick={applyCustomColor}
+                            className="bg-blue-500 text-white px-2 py-1 rounded"
+                          >
+                            Apply
+                          </button>
+                        </div>
                       </div>
                     </div>
                   )}

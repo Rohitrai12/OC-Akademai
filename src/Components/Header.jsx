@@ -44,7 +44,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100] lg:p-0 p-5 bg-white">
+    <div className="m-auto mb-2 fixed w-[100%] top-0 z-[100] lg:p-0 p-5 bg-white]">
       {/* Navbar toggle button */}
       <button
         onClick={toggleNav}
@@ -142,18 +142,18 @@ function Header() {
                   </svg>
                 </div>
               </div>
-              <Link to="#" className="lg:inline block font-semibold m-2">
+              <Link to="#" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
                 Try Studio Free
               </Link>
-              <Link to="#" className="lg:inline block font-semibold m-2">
+              <Link to="#" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
                 Support
               </Link>
-              <Link to="#" className="lg:inline block font-semibold m-2">
+              <Link to="/contact-us" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
                 Contact Us
               </Link>
               <Link
                 to="/login"
-                className="lg:inline block font-semibold m-2 bg-[#091d4f] text-white p-2 w-[120px] rounded-full h-fit text-center"
+                className="lg:inline block font-semibold m-2 bg-[#091d4f] text-white p-2 w-[120px] rounded-full h-fit text-center active:scale-90 transition duration-300"
               >
                 Log In
               </Link>
@@ -188,7 +188,7 @@ function Header() {
                   to={item.link}
                   className={`lg:inline block font-semibold m-2 ${
                     item.button
-                      ? "bg-[#091d4f] text-white p-2 w-fit rounded-full"
+                      ? "bg-[#091d4f] text-white p-2 w-fit rounded-full "
                       : ""
                   }`}
                 >

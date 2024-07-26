@@ -18,21 +18,24 @@ const Footer = () => {
             <img
               src={logo}
               alt="Logo"
-              className="w-[130px] ml-[28px] mb-[31px]"
-            />{" "}
-            <div className="lg:ml-10  lg:mt-0 mt-10">
-              <p className=" font-medium text-[#41707f]">GLOBAL HQ</p>
+              className="w-[130px] mb-[31px] lg:ml-[28px]"
+            />
+            <div className="lg:ml-10 lg:mt-0 mt-10 text-center lg:text-left">
+              <p className="font-medium text-[#41707f]">GLOBAL HQ</p>
               <p className="w-full lg:w-[189px] text-[14px] font-[500]">
                 Via Adelaide Ristori, 13D, 40127, Bologna, BO, Italy
               </p>
               <div className="mt-4 lg:mt-10 font-semibold text-red-600">
-                <p className="flex items-center gap-2 lg:gap-4">
+                <p className="flex items-center justify-center lg:justify-start gap-2 lg:gap-4">
                   CONTACT US <FaArrowRight />
                 </p>
-                <p className="mt-2 lg:mt-4 flex items-center gap-2 lg:gap-4">
+                <p className="mt-2 lg:mt-4 flex items-center justify-center lg:justify-start gap-2 lg:gap-4">
                   +393494333088 <FaArrowRight />
                 </p>
               </div>
+              <button className="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 w-[148px] active:scale-90 transition duration-300 rounded-full mx-auto lg:mx-0">
+                Donate Us
+              </button>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
@@ -44,7 +47,6 @@ const Footer = () => {
               <p>Akademia Studio</p>
               <p>Akademia Catalog</p>
               <p>Akademia BigFigure</p>
-
               <p>Assessment</p>
               <p>MindSphere</p>
               <p>LearnPlatform</p>
@@ -100,10 +102,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-4 flex justify-center space-x-4 text-sm text-gray-600 flex-wrap font-semibold">
+        <div className="mt-8 pt-4 flex justify-center flex-wrap space-x-4 text-sm text-gray-600 font-semibold">
           <p className="hover:text-red-600 cursor-pointer">Privacy |</p>
           <p className="hover:text-red-600 cursor-pointer">
-            Eropean Union Privacy Notice |
+            European Union Privacy Notice |
           </p>
           <p className="hover:text-red-600 cursor-pointer">
             Do Not Sell My Personal Information |
@@ -113,7 +115,7 @@ const Footer = () => {
           <p className="hover:text-red-600 cursor-pointer">Status|</p>
         </div>
       </footer>
-      <div className="bg-gray-200 py-4 text-center text-sm text-gray-600 mt-[-14px] flex flex-wrap justify-center items-center px-[25px] gap-[92px]">
+      <div className="bg-gray-200 py-4 text-center text-sm text-gray-600 mt-[-14px] flex flex-wrap justify-center items-center px-[25px] gap-8 lg:gap-[92px]">
         <p>
           Copyright © 2024 jovanotti srl. All rights reserved. Various
           trademarks held by their respective owners.
@@ -121,7 +123,7 @@ const Footer = () => {
         <div className="flex space-x-4 text-[22px]">
           <FaLinkedin className="cursor-pointer hover:text-red-600" />
           <FaTwitterSquare className="cursor-pointer hover:text-red-600" />
-          <FaFacebookSquare className=" cursor-pointer hover:text-red-600" />
+          <FaFacebookSquare className="cursor-pointer hover:text-red-600" />
           <FaInstagramSquare className="cursor-pointer hover:text-red-600" />
           <FaYoutubeSquare className="cursor-pointer hover:text-red-600" />
         </div>
