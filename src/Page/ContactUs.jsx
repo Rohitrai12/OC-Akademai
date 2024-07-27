@@ -70,10 +70,10 @@ const ContactUs = () => {
         <p className="text-[#004d60] text-sm md:text-base">
           For general inquiries, please email{" "}
           <a
-            href="mailto:info@instructure.com"
+            href="mailto:info@jovannotti.com"
             className="text-red-600 hover:underline"
           >
-            info@instructure.com
+            info@jovannotti.com
           </a>
           .
         </p>
