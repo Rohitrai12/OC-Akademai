@@ -12,6 +12,7 @@ import ViewAllCourses from "./Page/ViewAllCourses";
 import ContactUs from "./Page/ContactUs";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import ComingSoon from './Page/ComingSoon'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,7 +29,7 @@ function App() {
   };
 
   // Determine if Header and Footer should be shown based on current route
-  const showHeaderAndFooter = !["/login", "/signup", "/signupas"].includes(location.pathname);
+  const showHeaderAndFooter = !["/login", "/Signup", "/signupas"].includes(location.pathname);
 
   console.log("Current Path:", location.pathname);
   console.log("Show Header and Footer:", showHeaderAndFooter);
@@ -44,6 +45,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signupas" element={<SignupAsA />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/ComingSoon" element={<ComingSoon />} />
         </Routes>
       </div>
 
