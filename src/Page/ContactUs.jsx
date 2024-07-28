@@ -1,73 +1,21 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React from "react";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    country: "",
-    jobTitle: "",
-    organization: "",
-    orgType: "",
-    needs: "",
-    help: "",
-  });
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      email: formData.email,
-      phone: formData.phone,
-      country: formData.country,
-      jobTitle: formData.jobTitle,
-      organization: formData.organization,
-      orgType: formData.orgType,
-      needs: formData.needs,
-      help: formData.help,
-    };
-
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        templateParams,
-        "YOUR_USER_ID"
-      )
-      .then((response) => {
-        console.log("Email sent successfully:", response);
-        alert("Message sent successfully!");
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-        alert("Failed to send message.");
-      });
-  };
-
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 md:px-12 py-6 md:py-12 mt-[175px] pl-[80px] bg-gradient-to-r from-[#f2f8fa] to-[#e6f3f7]">
+    <div className="flex flex-col lg:flex-row justify-center min-h-screen px-4 md:px-12 py-6 md:py-12 bg-gradient-to-r from-[#f2f8fa] to-[#e6f3f7] lg:mt-[175px]">
       {/* Contact Information Section */}
-      <div className="flex-1 md:mr-8 mb-6 md:mb-0 px-4 md:px-0 mt-[-322px] ml-[83px]">
-        <h2 className="text-[14px] font-extrabold text-[#003e50] mb-2">
+      <div className="flex-1 lg:text-left text-center lg:mr-8 mb-6 lg:mb-0 px-4 lg:px-0 lg:mt-0 lg:ml-20 mt-[24px]">
+        <h2 className="text-sm font-extrabold text-[#003e50] mb-2">
           CONTACT US
         </h2>
-        <h1 className="font-bold text-[#003e50] mb-6 leading-[73px] w-[537px] text-[4rem]">
+        <h1 className="font-bold text-[#003e50] mb-6 leading-tight text-4xl lg:text-6xl w-[59%]">
           We are here and <span className="text-red-600">ready to help</span>
         </h1>
-        <p className="text-[#004d60] mb-4 text-sm md:text-base">
+        <p className="text-[#004d60] mb-4 text-sm lg:text-base">
           Drop us a line, give us a call, or get in touch with one of our
           regional offices.
         </p>
-        <p className="text-[#004d60] text-sm md:text-base">
+        <p className="text-[#004d60] text-sm lg:text-base">
           For general inquiries, please email{" "}
           <a
             href="mailto:info@jovannotti.com"
@@ -80,7 +28,7 @@ const ContactUs = () => {
 
         {/* Call Us Now Section */}
         <div className="mt-8">
-          <h1 className="text-2xl md:text-3xl text-[#006581] font-bold mb-4">
+          <h1 className="text-2xl lg:text-3xl text-[#006581] font-bold mb-4">
             Call Us
           </h1>
           <p className="text-[#004d60] mb-6">
@@ -96,11 +44,11 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="flex-1 bg-white rounded-lg p-6 md:p-8 max-w-xl w-full shadow-2xl">
+      <div className="flex-1 bg-white rounded-xl p-6 md:p-8 max-w-xl w-full shadow-2xl lg:m-0 m-auto">
         <h1 className="text-2xl md:text-4xl font-semibold text-[#003e50] mb-4">
           Contact Us
         </h1>
-        <form onSubmit={handleSubmit}>
+        <form action="https://formspree.io/f/manwepej" method="POST">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {/* First Row */}
             <div>
@@ -112,12 +60,10 @@ const ContactUs = () => {
               </label>
               <input
                 id="firstName"
-                type="text"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-                placeholder="John"
-                value={formData.firstName}
-                onChange={handleChange}
-                aria-required="true"
+                placeholder="Jovan"
+                type="text"
+                name="user_firstName"
               />
             </div>
             <div>
@@ -129,12 +75,10 @@ const ContactUs = () => {
               </label>
               <input
                 id="lastName"
-                type="text"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-                placeholder="Doe"
-                value={formData.lastName}
-                onChange={handleChange}
-                aria-required="true"
+                placeholder="Kalyango"
+                type="text"
+                name="user_lastName"
               />
             </div>
 
@@ -148,12 +92,10 @@ const ContactUs = () => {
               </label>
               <input
                 id="email"
-                type="email"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
                 placeholder="example@domain.com"
-                value={formData.email}
-                onChange={handleChange}
-                aria-required="true"
+                type="email"
+                name="user_email"
               />
             </div>
 
@@ -170,9 +112,7 @@ const ContactUs = () => {
                 type="tel"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
                 placeholder="+1 (123) 456-7890"
-                value={formData.phone}
-                onChange={handleChange}
-                aria-required="true"
+                name="user_phone"
               />
             </div>
             <div>
@@ -185,9 +125,7 @@ const ContactUs = () => {
               <select
                 id="country"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-                aria-required="true"
-                value={formData.country}
-                onChange={handleChange}
+                name="user_country"
               >
                 <option value="">Select your country</option>
                 <option value="us">United States</option>
@@ -245,9 +183,7 @@ const ContactUs = () => {
                 type="text"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
                 placeholder="Your job title"
-                value={formData.jobTitle}
-                onChange={handleChange}
-                aria-required="true"
+                name="user_jobTitle"
               />
             </div>
             <div>
@@ -261,15 +197,13 @@ const ContactUs = () => {
                 id="organization"
                 type="text"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-                placeholder="School or Organization"
-                value={formData.organization}
-                onChange={handleChange}
-                aria-required="true"
+                placeholder="Your school or organization"
+                name="user_organization"
               />
             </div>
 
             {/* Fifth Row */}
-            <div className="sm:col-span-2">
+            <div>
               <label
                 className="block text-gray-700 text-sm font-medium"
                 htmlFor="orgType"
@@ -279,23 +213,18 @@ const ContactUs = () => {
               <select
                 id="orgType"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-                value={formData.orgType}
-                onChange={handleChange}
-                aria-required="true"
+                name="user_orgType"
               >
                 <option value="">Select organization type</option>
-                <option value="Corporate Education">Corporate Education</option>
-                <option value="Further Education">Further Education</option>
-                <option value="Government">Government</option>
-                <option value="Higher Ed">Higher Ed</option>
-                <option value="K12">K12</option>
-                <option value="RTO/Training">RTO/Training</option>
-                <option value="EdTech">EdTech</option>
+                <option value="school">School</option>
+                <option value="university">University</option>
+                <option value="business">Business</option>
+                <option value="non-profit">Non-Profit</option>
+                <option value="government">Government</option>
+                <option value="other">Other</option>
               </select>
             </div>
-
-            {/* Sixth Row */}
-            <div className="sm:col-span-2">
+            <div>
               <label
                 className="block text-gray-700 text-sm font-medium"
                 htmlFor="needs"
@@ -305,46 +234,41 @@ const ContactUs = () => {
               <select
                 id="needs"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-                value={formData.needs}
-                onChange={handleChange}
-                aria-required="true"
+                name="user_needs"
               >
-                <option value="">Select your need</option>
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="connect with sales">
-                  I want to connect with sales.
-                </option>
-                <option value="parent/teacher needing support">
-                  I'm a student/parent/teacher needing support.
-                </option>
+                <option value="">Select your needs</option>
+                <option value="training">Training</option>
+                <option value="consultation">Consultation</option>
                 <option value="partnership">Partnership</option>
+                <option value="information">Information</option>
+                <option value="support">Support</option>
+                <option value="other">Other</option>
               </select>
             </div>
 
-            {/* Seventh Row */}
+            {/* Sixth Row */}
             <div className="sm:col-span-2">
               <label
                 className="block text-gray-700 text-sm font-medium"
-                htmlFor="help"
+                htmlFor="message"
               >
-                *How Can We Help?
+                *Message
               </label>
               <textarea
-                id="help"
+                id="message"
                 className="w-full border border-gray-300 rounded-lg p-3 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+                placeholder="Write your message here"
                 rows="4"
-                placeholder="Describe your needs"
-                value={formData.help}
-                onChange={handleChange}
-                aria-required="true"
+                name="user_message"
               ></textarea>
             </div>
           </div>
+
           <button
             type="submit"
-            className="mt-6 w-full bg-[#091d4f] text-white py-3 active:scale-90 transition duration-300 rounded-full"
+            className="w-full mt-6 bg-[#003e50] text-white font-semibold py-3 px-6 rounded-full transition duration-300 hover:bg-red-600 active:scale-95 shadow-2xl"
           >
-            Submit
+            Send Message
           </button>
         </form>
       </div>
