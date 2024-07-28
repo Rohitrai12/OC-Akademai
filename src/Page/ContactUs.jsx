@@ -48,7 +48,7 @@ const ContactUs = () => {
         <h1 className="text-2xl md:text-4xl font-semibold text-[#003e50] mb-4">
           Contact Us
         </h1>
-        <form action="https://formspree.io/f/manwepej" method="POST">
+        <form action="https://formspree.io/f/xdkneypl" method="POST">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {/* First Row */}
             <div>
