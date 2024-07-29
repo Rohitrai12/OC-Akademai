@@ -12,6 +12,7 @@ function Header() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
   const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
 
 
   const toggleInputVisibility = () => {
@@ -71,9 +72,8 @@ function Header() {
 
       {/* Navbar menu */}
       <div
-        className={`lg:flex lg:flex-col lg:items-center ${
-          navToggle ? "block" : "hidden"
-        } ${showWhiteBackground ? "bg-white" : ""}`}
+        className={`lg:flex lg:flex-col lg:items-center ${navToggle ? "block" : "hidden"
+          } ${showWhiteBackground ? "bg-white" : ""}`}
       >
         {/* Top section */}
         <div className="w-[100%] bg-white boxShadow">
@@ -104,17 +104,15 @@ function Header() {
             <div className="lg:flex items-center lg:w-[60%] xl:w-[53%%] justify-between mt-4 lg:mt-0">
               <div className="relative">
                 <div
-                  className={`p-2 rounded-full flex items-center justify-center ${
-                    isVisible ? "shadow-lg" : ""
-                  } w-fit`}
+                  className={`p-2 rounded-full flex items-center justify-center ${isVisible ? "shadow-lg" : ""
+                    } w-fit`}
                 >
                   {/* Input field with transition */}
                   <input
                     type="text"
                     placeholder="Search here ..."
-                    className={`border-none transition-all duration-500 transform ${
-                      isVisible ? "translate-x-0" : "-translate-x-full"
-                    }`}
+                    className={`border-none transition-all duration-500 transform ${isVisible ? "translate-x-0" : "-translate-x-full"
+                      }`}
                     style={{ width: isVisible ? "150px" : "0" }}
                   />
                   {/* SVG icon */}
@@ -155,12 +153,13 @@ function Header() {
               <Link to="/contact-us" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
                 Contact Us
               </Link>
-              <Link
-                to="/login"
-                className="lg:inline block font-semibold m-2 bg-[#091d4f] text-white p-2 w-[120px] rounded-full h-fit text-center active:scale-90 transition duration-300"
-              >
-                Log In
+              <Link>
+                <button onClick={() => loginWithRedirect()} className="lg:inline block font-semibold m-2 bg-[#091d4f] text-white p-2 w-[120px] rounded-full h-fit text-center active:scale-90 transition duration-300"
+                >Log In</button>
               </Link>
+              <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                Log Out
+              </button>
             </div>
           </div>
         </div>
@@ -190,11 +189,10 @@ function Header() {
               >
                 <Link
                   to={item.link}
-                  className={`lg:inline block font-semibold m-2 ${
-                    item.button
-                      ? "bg-[#091d4f] text-white p-2 w-fit rounded-full "
-                      : ""
-                  }`}
+                  className={`lg:inline block font-semibold m-2 ${item.button
+                    ? "bg-[#091d4f] text-white p-2 w-fit rounded-full "
+                    : ""
+                    }`}
                 >
                   {item.name}
                 </Link>

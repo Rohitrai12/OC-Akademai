@@ -45,7 +45,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signupas" element={<SignupAsA />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/ComingSoon" element={<ComingSoon />} />
+          <Route path="/comingsoon" element={<ComingSoon />} />
         </Routes>
       </div>
 
