@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Images/Color-JO.png";
 import icon from "../assets/Images/browser.png";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,6 +11,8 @@ function Header() {
   const [showWhiteBackground, setShowWhiteBackground] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
+  const { loginWithRedirect } = useAuth0();
+
 
   const toggleInputVisibility = () => {
     setIsVisible(!isVisible);
