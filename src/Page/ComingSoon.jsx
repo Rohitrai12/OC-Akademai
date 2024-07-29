@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function ComingSoon() {
   const [progress, setProgress] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
+
+  const { logout } = useAuth0();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,6 +56,14 @@ function ComingSoon() {
             ></div>
           </div>
           <p className="text-lg mt-2">{Math.floor(progress)}% Complete</p> {/* Remove decimal points */}
+          
+          {/* Logout Button */}
+          <button
+            onClick={() => logout({ returnTo: window.location.origin })}
+            className="mt-4 px-6 py-3 bg-[#E4060F] text-white font-semibold rounded-lg shadow-lg hover:bg-[#c3050d] focus:outline-none focus:ring-2 focus:ring-[#E4060F] focus:ring-opacity-50 transition-colors duration-300"
+          >
+            Log Out
+          </button>
         </div>
       )}
     </div>

@@ -157,9 +157,7 @@ function Header() {
                 <button onClick={() => loginWithRedirect()} className="lg:inline block font-semibold m-2 bg-[#091d4f] text-white p-2 w-[120px] rounded-full h-fit text-center active:scale-90 transition duration-300"
                 >Log In</button>
               </Link>
-              <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                Log Out
-              </button>
+       
             </div>
           </div>
         </div>
