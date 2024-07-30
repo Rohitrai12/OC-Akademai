@@ -176,7 +176,7 @@ function Header() {
               { name: "Professional ED", link: "#" },
               { name: "Resources", link: "#" },
               { name: "News & Events", link: "#" },
-              { name: "About Us", link: "#" },
+              { name: "About Us", link: "/about" },
               { name: "Get a Studio", link: "#", button: true },
             ].map((item) => (
               <div

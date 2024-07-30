@@ -22,7 +22,6 @@ const HomePage = () => {
       <OurAward />
       <Crafting />
       <Ready />
-      <Footer />
     </div>
   );
 };

@@ -13,6 +13,7 @@ import ContactUs from "./Page/ContactUs";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import ComingSoon from './Page/ComingSoon'
+import About from "./Page/About";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -46,6 +47,7 @@ function App() {
           <Route path="/signupas" element={<SignupAsA />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/comingsoon" element={<ComingSoon />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
 
