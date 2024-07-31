@@ -22,7 +22,7 @@ const AboutUs = () => {
                         <p className="mt-4 text-lg text-gray-700 leading-relaxed">
                             But we're not only the makers of a leading learning management system. We're an education technology company with a mission to elevate student success, amplify the power of teaching, and inspire everyone to learn together.
                         </p>
-                        <button className="mt-6 px-6 py-3 bg-red-600 text-white font-semibold rounded-md shadow-md hover:bg-red-700 transition duration-300">
+                        <button className="mt-6 px-6 py-3 bg-red-600 text-white font-semibold rounded-md shadow-md hover:bg-red-700  transition duration-300 active:scale-90">
                             READ OUR STORY →
                         </button>
                     </div>
@@ -162,7 +162,7 @@ const AboutUs = () => {
 
                     </p>
                     <button
-                        className="mt-8 px-6 w-fit rounded-full p-3 bg-[white] text-[#e4060f] font-semibold"
+                        className="mt-8 px-6 w-fit rounded-full p-3 bg-[white] text-[#e4060f] font-semibold transition duration-300 active:scale-90"
                         style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
                     >
                         Learn more about us {" "}
@@ -203,7 +203,7 @@ const AboutUs = () => {
 
                     </p>
                     <button
-                        className="mt-8 block m-auto px-6 w-fit rounded-full p-3 bg-[white] text-[#e4060f] font-semibold"
+                        className="mt-8 block m-auto px-6 w-fit rounded-full p-3 bg-[white] text-[#e4060f] font-semibold transition duration-300 active:scale-90"
                         style={{ boxShadow: " 0px 20px 50px 10px rgba(20, 61, 80, 0.15)" }}
                     >
                         Learn More {" "}
@@ -233,8 +233,6 @@ const AboutUs = () => {
                             </defs>
                         </svg>
                     </button>{" "}
-
-
                 </div>
             </div>
         </>
