@@ -11,6 +11,7 @@ import Six from "../assets/Images/six.png";
 const AboutUs = () => {
     return (
         <>
+            {/*  */}
             <div className="bg-[#f0f8fa] py-16 px-6 lg:mt-[175px]">
                 <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center">
                     <div className="md:w-3/5">
@@ -195,7 +196,6 @@ const AboutUs = () => {
                 </div>{" "}
             </div>
             {/*  */}
-
             <div className='bg-[#091D4F] p-10 lg:p-20 '>
                 <div className='container m-auto'>
 
@@ -235,6 +235,7 @@ const AboutUs = () => {
                     </button>{" "}
                 </div>
             </div>
+            {/*  */}
         </>
     );
 };
