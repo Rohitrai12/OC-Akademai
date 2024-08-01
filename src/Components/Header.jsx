@@ -147,7 +147,7 @@ function Header() {
               <Link to="#" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
                 Try Studio Free
               </Link>
-              <Link to="#" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
+              <Link to="/support" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
                 Support
               </Link>
               <Link to="/contact-us" className="lg:inline block font-semibold m-2 active:scale-90 transition duration-300">
