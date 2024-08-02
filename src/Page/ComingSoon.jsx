@@ -34,7 +34,7 @@ function ComingSoon() {
       {/* Description */}
       {!isCompleted ? (
         <p className="text-xl max-w-lg mb-6">
-          Our developers and engineers are diligently working on an exciting update. 
+          Our developers and engineers are diligently working on an exciting update.
           Stay tuned as we bring you something amazing soon!
         </p>
       ) : (
@@ -56,7 +56,7 @@ function ComingSoon() {
             ></div>
           </div>
           <p className="text-lg mt-2">{Math.floor(progress)}% Complete</p> {/* Remove decimal points */}
-          
+
           {/* Logout Button */}
           <button
             onClick={() => logout({ returnTo: window.location.origin })}
