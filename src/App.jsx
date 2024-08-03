@@ -15,6 +15,7 @@ import Header from "./Components/Header";
 import ComingSoon from './Page/ComingSoon'
 import About from "./Page/About";
 import SupportPage from "./Page/SupportPage";
+import TryCanvas from "./Page/TryCanvas";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -49,6 +50,7 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/comingsoon" element={<ComingSoon />} />
           <Route path="/about" element={<About />} />
+          <Route path="/try-canvas" element={<TryCanvas />} />          
           <Route path="/support" element={<SupportPage />} />          
         </Routes>
       </div>
